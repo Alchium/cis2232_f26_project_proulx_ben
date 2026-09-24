@@ -89,8 +89,24 @@ public class Controller {
         //TODO what if the match id already exists.  Give the user a warning and ask if they want to overwrite
         //the row.
         //read file nad see if the new match is already there, and if so check with user to see if should overwrite
-
-        matchMap.put(newMatch.getMatchNum(), newMatch);
+        readAll();
+        for (Match current : matchMap.values()) {
+            int currentId = current.getMatchNum();
+            if (currentId == newMatch.getMatchNum()) {
+                System.out.println(MESSAGE_ERROR);
+                String overwrite = CisUtility.getInputString("New match number already exists on file. would you like to overwrite the match info? ");
+                switch (overwrite) {
+                    case "Y" :
+                        matchMap.put(newMatch.getMatchNum(), newMatch);
+                        break;
+                    case "N" :
+                        break;
+                }
+            }
+            else {
+                matchMap.put(newMatch.getMatchNum(), newMatch);
+            }
+        }
         writeAll();
     }
 
@@ -120,6 +136,9 @@ public class Controller {
         readAll();
         //TODO Need to show all the campers.  Note want to show the latest from the file, not just
         //what is currently in the map.
+        for (Match current : matchMap.values()) {
+            current.toString();
+        }
     }
 
 
