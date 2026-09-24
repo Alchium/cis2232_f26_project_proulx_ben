@@ -35,7 +35,7 @@ public class Controller {
 
     private static HashMap<Integer, Match> matchMap = new HashMap();
     private static Gson gson = new Gson();
-    public static final String PATH_NAME = "matches.json";
+    public static final String PATH_NAME = "matches_proulx_ben.json";
 
     public static void main(String[] args) {
 
