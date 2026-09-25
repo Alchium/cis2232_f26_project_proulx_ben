@@ -4,6 +4,7 @@ import ca.hccis.files.entity.Match;
 import ca.hccis.util.CisUtility;
 import com.google.gson.Gson;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,7 +36,8 @@ public class Controller {
 
     private static HashMap<Integer, Match> matchMap = new HashMap();
     private static Gson gson = new Gson();
-    public static final String PATH_NAME = "matches_proulx_ben.json";
+    public static final String PATH_NAME = "c:\\cis2232\\";
+    public static final String FILE_NAME = "matches_proulx_ben.json";
 
     public static void main(String[] args) {
 
@@ -126,7 +128,7 @@ public class Controller {
     public static void viewAll() {
         mapAll();
         try {
-            FileReader reader = new FileReader(PATH_NAME);
+            FileReader reader = new FileReader(PATH_NAME + FILE_NAME);
             List<String> lines = reader.readAllLines();
             for(int i = 0; i < lines.size(); i++) {
                 Match matchFromJson = gson.fromJson(lines.get(i), Match.class);
@@ -141,7 +143,7 @@ public class Controller {
 
     public static void writeAll() {
         try {
-            FileWriter writer = new FileWriter(PATH_NAME, false);
+            FileWriter writer = new FileWriter(PATH_NAME + FILE_NAME, false);
             for (Match current : matchMap.values()) {
                 writer.append(gson.toJson(current));
                 writer.append(System.lineSeparator());
@@ -155,7 +157,7 @@ public class Controller {
 
     public static void mapAll() {
         try {
-            FileReader reader = new FileReader(PATH_NAME);
+            FileReader reader = new FileReader(PATH_NAME + FILE_NAME);
             List<String> lines = reader.readAllLines();
             for(int i = 0; i < lines.size(); i++) {
                 Match matchFromJson = gson.fromJson(lines.get(i), Match.class);
@@ -168,10 +170,17 @@ public class Controller {
 
 
     public static void initialize() {
-
-        Path path = Paths.get(PATH_NAME);
+        // Check if folder exists
+        File folder = new File(PATH_NAME);
+        if (folder.mkdir()) {
+            System.out.println("Folder not present. Created new folder.");
+        } else {
+            System.out.println("Folder present.");
+        }
 
         // Check if the file exists
+        Path path = Paths.get(PATH_NAME + FILE_NAME);
+
         if (Files.exists(path)) {
             System.out.println("Matches present in file.");
             mapAll();
