@@ -94,7 +94,7 @@ public class Controller {
             int currentId = current.getMatchNum();
             if (currentId == newMatch.getMatchNum()) {
                 System.out.println(MESSAGE_ERROR);
-                String overwrite = CisUtility.getInputString("New match number already exists on file. would you like to overwrite the match info? ");
+                String overwrite = CisUtility.getInputString("New match number already exists on file. would you like to overwrite the match info? (Y/N) ");
                 switch (overwrite) {
                     case "Y" :
                         matchMap.put(newMatch.getMatchNum(), newMatch);
@@ -137,7 +137,7 @@ public class Controller {
         //TODO Need to show all the campers.  Note want to show the latest from the file, not just
         //what is currently in the map.
         for (Match current : matchMap.values()) {
-            current.toString();
+            System.out.println(current.toString());
         }
     }
 
@@ -176,7 +176,7 @@ public class Controller {
 
         // Check if the file exists
         if (Files.exists(path)) {
-            System.out.println("Matches exist.");
+            System.out.println("Matches present in file.");
             readAll();
         } else {
 

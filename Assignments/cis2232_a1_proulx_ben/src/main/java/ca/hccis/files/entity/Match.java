@@ -51,7 +51,7 @@ public class Match {
         String cRank = ca.hccis.util.CisUtility.getInputString("Current rank: ");
         int rankProg = ca.hccis.util.CisUtility.getInputInt("New rank progress: ");
         int elim = ca.hccis.util.CisUtility.getInputInt("Elimination count: ");
-        boolean gWon = ca.hccis.util.CisUtility.getInputBoolean("Game won? (true/false): ");
+        boolean gWon = ca.hccis.util.CisUtility.getInputBoolean("Game won? ");
 
         setMatchNum(mNum);
         setPlayerName(pName);
@@ -112,8 +112,8 @@ public class Match {
     @Override
     public String toString() {
         return String.format(
-                "Match: matchNum=%d, playerName='%s', currentRank='%s'",
-                matchNum, playerName, currentRank
+                "Match: matchNum=%d, playerName=%s, currentRank=%s, rankProgress=%d, eliminations=%d, gameWon=%s ",
+                matchNum, playerName, currentRank, rankProgress,eliminations,gameWon
         );
     }
 
