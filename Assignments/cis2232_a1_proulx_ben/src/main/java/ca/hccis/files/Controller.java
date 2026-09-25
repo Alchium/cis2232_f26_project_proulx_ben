@@ -40,16 +40,6 @@ public class Controller {
     public static void main(String[] args) {
 
         initialize();
-
-        //Gson
-//        Camper test = camperMap.get(22334);
-//        String camperJson = gson.toJson(test);
-//        IO.println(camperJson);
-//
-//        Camper camperFromJson = gson.fromJson(camperJson, Camper.class);
-//        System.out.println(camperFromJson.toString());
-
-
         String menuOption;
 
         do {
@@ -60,10 +50,10 @@ public class Controller {
                     System.out.println(MESSAGE_EXIT);
                     break; //Break out of the loop as we're finished.
                 case "A":
-                    add();
+                    addMatch();
                     break;
                 case "E":
-                    edit();
+                    editMatch();
                     break;
                 case "V":
                     viewAll();
@@ -81,31 +71,29 @@ public class Controller {
      * @author BP
      * @since 20260918
      */
-    public static void add() {
+    public static void addMatch() {
         Match newMatch = new Match();
+        boolean overwriteDecision = true;
         IO.println("--Add Fortnite Match--");
         newMatch.getInformation();
-
-        //TODO what if the match id already exists.  Give the user a warning and ask if they want to overwrite
-        //the row.
-        //read file nad see if the new match is already there, and if so check with user to see if should overwrite
-        readAll();
+        mapAll();
         for (Match current : matchMap.values()) {
             int currentId = current.getMatchNum();
             if (currentId == newMatch.getMatchNum()) {
                 System.out.println(MESSAGE_ERROR);
-                String overwrite = CisUtility.getInputString("New match number already exists on file. would you like to overwrite the match info? (Y/N) ");
-                switch (overwrite) {
-                    case "Y" :
-                        matchMap.put(newMatch.getMatchNum(), newMatch);
+                String overwriteOutput = CisUtility.getInputString("New match number already exists on file. would you like to overwrite the match info? (y/n) ");
+                switch (overwriteOutput) {
+                    case "y" :
                         break;
-                    case "N" :
+                    case "n" :
+                        overwriteDecision = false;
                         break;
                 }
             }
-            else {
-                matchMap.put(newMatch.getMatchNum(), newMatch);
-            }
+        }
+        if (overwriteDecision){
+            matchMap.put(newMatch.getMatchNum(), newMatch);
+            System.out.println(MESSAGE_SUCCESS);
         }
         writeAll();
     }
@@ -116,14 +104,17 @@ public class Controller {
      * @author BP
      * @since 20260918
      */
-    public static void edit() {
+    public static void editMatch() {
         System.out.println("Processing option 2");
         int matchNum = CisUtility.getInputInt("Match number: ");
         Match editingMatch = matchMap.get(matchNum);
-        editingMatch.edit();
-        //TODO What if the matchID not found?
-        //Handle this situation.
-        writeAll(); //save to file
+        try {
+            editingMatch.edit();
+            writeAll(); //save to file
+        } catch (NullPointerException e) {
+            System.out.println(MESSAGE_ERROR);
+            System.out.println("Match ID not present on file.");
+        }
     }
 
     /**
@@ -133,11 +124,17 @@ public class Controller {
      * @since 20260918
      */
     public static void viewAll() {
-        readAll();
-        //TODO Need to show all the campers.  Note want to show the latest from the file, not just
-        //what is currently in the map.
-        for (Match current : matchMap.values()) {
-            System.out.println(current.toString());
+        mapAll();
+        try {
+            FileReader reader = new FileReader(PATH_NAME);
+            List<String> lines = reader.readAllLines();
+            for(int i = 0; i < lines.size(); i++) {
+                Match matchFromJson = gson.fromJson(lines.get(i), Match.class);
+                System.out.println(matchFromJson.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error reading file");
         }
     }
 
@@ -156,7 +153,7 @@ public class Controller {
         }
     }
 
-    public static void readAll() {
+    public static void mapAll() {
         try {
             FileReader reader = new FileReader(PATH_NAME);
             List<String> lines = reader.readAllLines();
@@ -177,15 +174,15 @@ public class Controller {
         // Check if the file exists
         if (Files.exists(path)) {
             System.out.println("Matches present in file.");
-            readAll();
+            mapAll();
         } else {
 
 
-            Match match = new Match(1, "Alchiumi", "bronze", 23, 3,false);
-            Match match2 = new Match(2, "Alchiumi", "bronze", 45, 7,true);
-            Match match3 = new Match(3, "Alchiumi", "bronze", 67, 5,false);
-            Match match4 = new Match(4, "Alchiumi", "bronze", 58, 0,false);
-            Match match5 = new Match(5, "Alchiumi", "bronze", 80, 6,true);
+            Match match = new Match(1, "Alchiumi", "bronze", 23, 3,"n");
+            Match match2 = new Match(2, "Alchiumi", "bronze", 45, 7,"y");
+            Match match3 = new Match(3, "Alchiumi", "bronze", 67, 5,"n");
+            Match match4 = new Match(4, "Alchiumi", "bronze", 58, 0,"n");
+            Match match5 = new Match(5, "Alchiumi", "bronze", 80, 6,"y");
             matchMap.put(match.getMatchNum(), match);
             matchMap.put(match2.getMatchNum(), match2);
             matchMap.put(match3.getMatchNum(), match3);

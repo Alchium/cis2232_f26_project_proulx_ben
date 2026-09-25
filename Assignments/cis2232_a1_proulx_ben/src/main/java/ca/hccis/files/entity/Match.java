@@ -9,14 +9,14 @@ public class Match {
     private String currentRank;
     private int rankProgress;
     private int eliminations;
-    private boolean gameWon;
+    private String gameWon;
 
     public Match() {
     }
 
     // For assignment 1, I am interpreting each entity as a match report,
     // not each player, as the description requests match history and deletion of matches.
-    public Match(int matchNum, String playerName, String currentRank, int rankProgress, int eliminations, boolean gameWon) {
+    public Match(int matchNum, String playerName, String currentRank, int rankProgress, int eliminations, String gameWon) {
         this.matchNum = matchNum;
         this.playerName = playerName;
         this.currentRank = currentRank;
@@ -40,8 +40,8 @@ public class Match {
         System.out.print("Eliminations this match: ");
         eliminations = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Game won? (true/false): ");
-        gameWon = scanner.nextBoolean();
+        System.out.print("Game won? (y/n) ");
+        gameWon = scanner.nextLine();
     }
 
     public void edit(){
@@ -51,7 +51,7 @@ public class Match {
         String cRank = ca.hccis.util.CisUtility.getInputString("Current rank: ");
         int rankProg = ca.hccis.util.CisUtility.getInputInt("New rank progress: ");
         int elim = ca.hccis.util.CisUtility.getInputInt("Elimination count: ");
-        boolean gWon = ca.hccis.util.CisUtility.getInputBoolean("Game won? ");
+        String gWon = ca.hccis.util.CisUtility.getInputString("Game won? (y/n) ");
 
         setMatchNum(mNum);
         setPlayerName(pName);
@@ -101,11 +101,11 @@ public class Match {
         this.eliminations = eliminations;
     }
 
-    public boolean isGameWon() {
+    public String isGameWon() {
         return gameWon;
     }
 
-    public void setGameWon(boolean gameWon) {
+    public void setGameWon(String gameWon) {
         this.gameWon = gameWon;
     }
 
