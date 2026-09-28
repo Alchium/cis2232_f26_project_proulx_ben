@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="77239391-fc1c-4be2-a353-efe70e8764d8" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="77239391-fc1c-4be2-a353-efe70e8764d8" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="status" value="Completed" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="60065ba0-1294-4340-ace6-0006e1f5ecf3" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Bitbucket/cis2232_20252026_project_maclean_bj_squash/Project/squash_skills_tracker" value="36cAoAb89UfEcuaNsGQxpKE41Fe" />
+      <entry key="_C:/Users/bjmaclean/Documents/GitHub/cis2232_f26_project_maclean_bj/Project/squash_scoring_app" value="3JKVA3JAueI6fQYO7y14QsBPwlR" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="agent-panel" value="Auto" />
+      <entry key="chat-panel" value="Auto" />
+    </selectedModels>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="36cAoAb89UfEcuaNsGQxpKE41Fe" />
+  <component name="ProjectSessionTemplates">
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Ask" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TheApplication.executor": "Run",
+    "Database Script.createDatabase1.sql.executor": "Run",
+    "JUnit.SkillsAssessmentSquashTechnicalServiceTest.executor": "Run",
+    "Maven.squash_skills [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.TheApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/bjmaclean/Documents/GitHub/cis2232_f26_project_maclean_bj/Project/squash_scoring_app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "b60683e5-721a-4744-8191-aafa53944307",
+      "fa7dea25-c5e1-42f5-8507-f4b65e3ca148"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MariaDB",
+      "MySQL"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\resources\templates\report" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca\hccis\squash\bo" />
+      <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TheApplication">
+    <configuration name="createDatabase1.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase1.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="b60683e5-721a-4744-8191-aafa53944307" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SkillsAssessmentSquashTechnicalServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="squash_skills" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.hccis.squash.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ca.hccis.squash.rest" />
+      <option name="MAIN_CLASS_NAME" value="ca.hccis.squash.rest.SkillsAssessmentSquashTechnicalServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="squash_skills" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.squash.TheApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Database Script.createDatabase1.sql" />
+      <item itemvalue="JUnit.SkillsAssessmentSquashTechnicalServiceTest" />
+      <item itemvalue="Spring Boot.TheApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SkillsAssessmentSquashTechnicalServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="" />
+      <created>1765295658828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765295658828</updated>
+      <workItem from="1765295661315" duration="100000" />
+      <workItem from="1768249309338" duration="886000" />
+      <workItem from="1768312865620" duration="3000" />
+      <workItem from="1770908334584" duration="2592000" />
+      <workItem from="1771355194329" duration="2646000" />
+      <workItem from="1772488962778" duration="5862000" />
+      <workItem from="1772734832843" duration="2826000" />
+      <workItem from="1773068301352" duration="3763000" />
+      <workItem from="1773229301312" duration="3221000" />
+      <workItem from="1773662058320" duration="263000" />
+      <workItem from="1773678687710" duration="3475000" />
+      <workItem from="1773835771084" duration="12013000" />
+      <workItem from="1773945266182" duration="2064000" />
+      <workItem from="1774007558895" duration="627000" />
+      <workItem from="1774309695134" duration="882000" />
+      <workItem from="1777290375273" duration="2846000" />
+      <workItem from="1777562592615" duration="190000" />
+      <workItem from="1777903013651" duration="8852000" />
+      <workItem from="1778673414392" duration="41000" />
+      <workItem from="1778682837949" duration="610000" />
+      <workItem from="1779198688846" duration="1903000" />
+      <workItem from="1779727614511" duration="1456000" />
+      <workItem from="1779733376800" duration="170000" />
+      <workItem from="1779733557072" duration="393000" />
+      <workItem from="1779812240748" duration="53000" />
+      <workItem from="1779812332232" duration="1354000" />
+      <workItem from="1779820295353" duration="1716000" />
+      <workItem from="1780483935272" duration="14000" />
+      <workItem from="1780509644955" duration="32000" />
+      <workItem from="1780925920326" duration="2269000" />
+      <workItem from="1781028738570" duration="2573000" />
+      <workItem from="1781186918600" duration="3426000" />
+      <workItem from="1781544338855" duration="6801000" />
+      <workItem from="1781614759542" duration="434000" />
+      <workItem from="1781615207644" duration="338000" />
+      <workItem from="1781615556952" duration="7934000" />
+      <workItem from="1781705414102" duration="1937000" />
+      <workItem from="1781717671886" duration="1600000" />
+      <workItem from="1781808065117" duration="14000" />
+      <workItem from="1781883891815" duration="2123000" />
+      <workItem from="1781886055396" duration="489000" />
+      <workItem from="1781890587857" duration="1214000" />
+      <workItem from="1782147172355" duration="7590000" />
+      <workItem from="1782218091847" duration="2897000" />
+      <workItem from="1782235881197" duration="1841000" />
+      <workItem from="1786638457832" duration="134000" />
+      <workItem from="1787574471421" duration="3193000" />
+      <workItem from="1787744901196" duration="1901000" />
+      <workItem from="1787768161285" duration="2707000" />
+      <workItem from="1787918193776" duration="18530000" />
+      <workItem from="1789410012703" duration="620000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.graphql:spring-graphql" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-graphql" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.ws.rs:jakarta.ws.rs-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.xml.ws:jakarta.xml.ws-api" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
