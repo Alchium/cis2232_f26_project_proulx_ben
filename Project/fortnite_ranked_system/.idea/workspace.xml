@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Documentation/~$oject_Topic_Document_FortniteTracker_Ben.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9963e351-9170-481d-b1dc-8815ba433aea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9963e351-9170-481d-b1dc-8815ba433aea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/db-forest-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/db-forest-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mysql/createDatabase.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +55,8 @@
   <component name="DatabaseLocalColorSettings">
     <colors>
       <entry key="2c41b9d4-d0e9-4507-b5de-498276dad93a" value="" />
-      <entry key="3434da5e-405c-4baa-9c88-b6f214a4d11d" value="" />
-      <entry key="654cff6c-77c6-4eaa-b77b-dbf2aa2b4f8c" value="" />
       <entry key="9963e351-9170-481d-b1dc-8815ba433aea" value="" />
       <entry key="b60683e5-721a-4744-8191-aafa53944307" value="" />
-      <entry key="dfaced0a-12ca-499c-97b6-0305e8b18d54" value="" />
     </colors>
   </component>
   <component name="FileTemplateManagerImpl">
