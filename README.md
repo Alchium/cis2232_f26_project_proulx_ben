@@ -11,18 +11,21 @@ Quality Control:  Kody Verhulp	<br/>
 ## Description ##
 
 Build a Fortnite Ranked Tracker with a modern dashboard UI. Players can manually log matches, including eliminations, placement, wins, current rank, and rank progress. The application should automatically calculate statistics such as matches played, average eliminations, average placement, win rate, and overall ranked progression. Include match history, progress graphs, editable/deletable matches, persistent storage, and mobile responsiveness. Keep the code modular, organized, and easy to expand.
+
 ## Color ##
 
 Main Color:  Purple
 
 ## Required Fields ##
 
-matchNum	    String	<br/>
-playerName	    String	<br/>
-currentRank	    String	<br/>
-rankProgress	int		<br/>
-eliminations	Int		<br/>
-gameWon	        String	<br/>
+playerName	 |   String   |   Fortnite username of the player being tracked   <br/>
+currentRank  |  String	 |   The players current ranked division    <br/>
+rankProgress	| Int		 |   The players current percentage progress within their rank    <br/>
+matchedPlayed	| Int		 |   Total number of ranked matches recorded.    <br/>
+eliminations	| Int		 |   Total number of eliminations achieved    <br/>
+wins	        | Int		 |   Total number of ranked matches won    <br/>
+averagePlacement |	Int |   The player’s calculated average finishing position across matches    <br/>
+lastUpdated	     |  String  |   The date and time when the player’s ranked statistics were last updated    <br/>
 
 ## Calculation ##
 
