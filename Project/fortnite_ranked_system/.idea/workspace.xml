@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Documentation/~$oject_Topic_Document_FortniteTracker_Ben.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9963e351-9170-481d-b1dc-8815ba433aea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9963e351-9170-481d-b1dc-8815ba433aea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/db-forest-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/db-forest-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mysql/createDatabase.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +62,16 @@
       <entry key="chat-panel" value="Auto" />
     </selectedModels>
   </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="2c41b9d4-d0e9-4507-b5de-498276dad93a" value="" />
+      <entry key="3434da5e-405c-4baa-9c88-b6f214a4d11d" value="" />
+      <entry key="654cff6c-77c6-4eaa-b77b-dbf2aa2b4f8c" value="" />
+      <entry key="9963e351-9170-481d-b1dc-8815ba433aea" value="" />
+      <entry key="b60683e5-721a-4744-8191-aafa53944307" value="" />
+      <entry key="dfaced0a-12ca-499c-97b6-0305e8b18d54" value="" />
+    </colors>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -89,6 +107,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.TheApplication.executor": "Run",
+    "Database Script.createDatabase.sql.executor": "Run",
     "Database Script.createDatabase1.sql.executor": "Run",
     "JUnit.SkillsAssessmentSquashTechnicalServiceTest.executor": "Run",
     "Maven.squash_skills [package].executor": "Run",
@@ -122,7 +141,9 @@
       "mysql"
     ],
     "RunConfigurationTargetLRU": [
+      "9963e351-9170-481d-b1dc-8815ba433aea",
       "b60683e5-721a-4744-8191-aafa53944307",
+      "3434da5e-405c-4baa-9c88-b6f214a4d11d",
       "fa7dea25-c5e1-42f5-8507-f4b65e3ca148"
     ],
     "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
@@ -140,9 +161,15 @@
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TheApplication">
+  <component name="RunManager" selected="Database Script.createDatabase.sql">
     <configuration name="createDatabase1.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase1.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="b60683e5-721a-4744-8191-aafa53944307" />
+      <method v="2" />
+    </configuration>
+    <configuration name="createDatabase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" />
       <script-mode>FILE</script-mode>
       <data-source id="b60683e5-721a-4744-8191-aafa53944307" />
       <method v="2" />
@@ -171,6 +198,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Database Script.createDatabase.sql" />
       <item itemvalue="Database Script.createDatabase1.sql" />
       <item itemvalue="JUnit.SkillsAssessmentSquashTechnicalServiceTest" />
       <item itemvalue="Spring Boot.TheApplication" />
