@@ -46,7 +46,7 @@ public class Controller {
     /**
      * Gather the player's stats and display the calculated results.
      *
-     * @author Ben Proulx
+     * @author Ben Proulx / Claude
      * @since 20260921
      */
     public static void processOption1() {

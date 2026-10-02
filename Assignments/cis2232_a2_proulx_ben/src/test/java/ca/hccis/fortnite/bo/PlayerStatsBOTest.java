@@ -14,7 +14,7 @@ class PlayerStatsBOTest {
      * Test 1 created by BP following TDD.
      * README example: 5 wins / 20 matches x 100 = 25% win rate.
      *
-     * @author Ben Proulx
+     * @author Ben Proulx / Claude
      * @since 20260921
      */
     @Test
@@ -34,7 +34,7 @@ class PlayerStatsBOTest {
      * Test 2 created by BP following TDD.
      * No matches played must return 0 rather than dividing by zero.
      *
-     * @author Ben Proulx
+     * @author Ben Proulx / Claude
      * @since 20260921
      */
     @Test
@@ -54,7 +54,7 @@ class PlayerStatsBOTest {
      * Test 3 created by BP following TDD.
      * A partial win rate must always fall strictly between 0 and 100.
      *
-     * @author Ben Proulx
+     * @author Ben Proulx / Claude
      * @since 20260921
      */
     @Test
