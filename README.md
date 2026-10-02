@@ -23,11 +23,11 @@ Field | Type | Description
 --- | --- | ---
 playerName	 |   String   |   Fortnite username of the player being tracked   <br/>
 currentRank  |  String	 |   The players current ranked division    <br/>
-rankProgress	| Int		 |   The players current percentage progress within their rank    <br/>
+rankProgress	| Double		 |   The players current percentage progress within their rank    <br/>
 matchesPlayed	| Int		 |   Total number of ranked matches recorded.    <br/>
 eliminations	| Int		 |   Total number of eliminations achieved    <br/>
 wins	        | Int		 |   Total number of ranked matches won    <br/>
-averagePlacement |	Int |   The player’s calculated average finishing position across matches    <br/>
+averagePlacement |	Double |   The player’s calculated average finishing position across matches    <br/>
 lastUpdated	     |  String  |   The date and time when the player’s ranked statistics were last updated    <br/>
 
 ## Calculation ##
