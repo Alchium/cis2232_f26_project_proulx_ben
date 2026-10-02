@@ -10,12 +10,12 @@ DROP TABLE IF EXISTS player_table;
 CREATE TABLE player_table (
                               id                INT             NOT NULL AUTO_INCREMENT,
                               playerName        VARCHAR(100)    NOT NULL,
-                              currentRank       VARCHAR(10)     NOT NULL,
-                              rankProgress      DECIMAL         NOT NULL,
+                              currentRank       VARCHAR(20)     NOT NULL,
+                              rankProgress      DECIMAL(5,2)    NOT NULL,
                               matchesPlayed     INT             NOT NULL,
                               eliminations      INT             NOT NULL,
                               wins              INT             NOT NULL,
-                              averagePlacement  DECIMAL         NOT NULL,
+                              averagePlacement  DECIMAL(5,2)    NOT NULL,
                               lastUpdated       VARCHAR(100)    NOT NULL,
                               PRIMARY KEY (id)
 );
