@@ -21,14 +21,14 @@
 ## Required Fields ##
 Field | Type | Description
 --- | --- | ---
-playerName	 |   String   |   Fortnite username of the player being tracked   <br/>
+playerName	 |   String |   Fortnite username of the player being tracked   <br/>
 currentRank  |  String	 |   The players current ranked division    <br/>
-rankProgress	| Double		 |   The players current percentage progress within their rank    <br/>
+rankProgress	| Double	|   The players current percentage progress within their rank    <br/>
 matchesPlayed	| Int		 |   Total number of ranked matches recorded.    <br/>
 eliminations	| Int		 |   Total number of eliminations achieved    <br/>
 wins	        | Int		 |   Total number of ranked matches won    <br/>
 averagePlacement |	Double |   The player’s calculated average finishing position across matches    <br/>
-lastUpdated	     |  String  |   The date and time when the player’s ranked statistics were last updated    <br/>
+lastUpdated	     |  String |   The date and time when the player’s ranked statistics were last updated    <br/>
 
 ## Calculation ##
 
@@ -59,4 +59,10 @@ Main calculations: Rank Change, Average Eliminations, Win Rate, and Average Plac
 
 ## Report Details ##
 
-> To be determined in future sprint
+### Profile Stats ###
+
+> Enter a player name and the report will return match history and overall statistics.
+
+### Progress Graph ###
+
+> Have match info be displayed in a graph for visual interpretation.
