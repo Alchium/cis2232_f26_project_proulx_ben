@@ -5,51 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/PlayerStatsBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/PlayerStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/TheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/TheApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/bo/SkillsAssessmentSquashTechnicalBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/SkillsAssessmentSquashTechnicalBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/bo/SkillsAssessmentSquashTechnicalValidationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/SkillsAssessmentSquashTechnicalValidationBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/controllers/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/controllers/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/ReportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/controllers/SkillsAssessmentSquashTechnicalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/SkillsAssessmentSquashTechnicalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/dao/SkillsAssessmentSquashTechnicalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/dao/SkillsAssessmentSquashTechnicalDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/entity/ReportSquash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/ReportSquash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/entity/SkillsAssessmentSquashTechnicalDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/SkillsAssessmentSquashTechnicalDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/entity/Translate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/exception/AllAttributesNeededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/exception/AllAttributesNeededException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/graphql/SkillsAssessmentSquashTechnicalGraphQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalGraphQLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/graphql/SkillsAssessmentSquashTechnicalInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/jpa/entity/CodeValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/CodeValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/jpa/entity/CodeValueId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/CodeValueId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/jpa/entity/SkillsAssessmentSquashTechnical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/SkillsAssessmentSquashTechnical.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/repositories/CodeValueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/repositories/CodeValueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/repositories/SkillsAssessmentSquashTechnicalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/repositories/SkillsAssessmentSquashTechnicalRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/rest/SkillsAssessmentSquashTechnicalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/rest/SkillsAssessmentSquashTechnicalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/rest/TestSecureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/rest/TestSecureRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/security/SecurityHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/security/SecurityHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/CisUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/CisUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/CisUtilityFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/CisUtilityFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/CisUtilityNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/CisUtilityNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/DatabaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/DatabaseUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/ic_launcher.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashName.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashName.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashScore.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ca/hccis/squash/bo/SkillsAssessmentSquashTechnicalBOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ca/hccis/fortnite/bo/SkillsAssessmentSquashTechnicalBOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ca/hccis/squash/rest/SkillsAssessmentSquashTechnicalServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ca/hccis/fortnite/rest/SkillsAssessmentSquashTechnicalServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/report/reportSquashName.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/report/reportSquashName.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/report/reportSquashScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/report/reportSquashScore.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
