@@ -66,4 +66,4 @@ Main calculations: Rank Change, Average Eliminations, Win Rate, and Average Plac
 ### Player Report ###
 
 > Enter a player name and the report will return match history and overall statistics.
-> Have match info be displayed in a graph for visual interpretation.
+> Have rank progress info be displayed in a graph for visual interpretation.
