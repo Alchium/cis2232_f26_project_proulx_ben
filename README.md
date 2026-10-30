@@ -59,10 +59,11 @@ Main calculations: Rank Change, Average Eliminations, Win Rate, and Average Plac
 
 ## Report Details ##
 
-### Profile Stats ###
+### Home Page ###
+
+> List players on file by rank, showing basic personal statistics.
+
+### Player Report ###
 
 > Enter a player name and the report will return match history and overall statistics.
-
-### Progress Graph ###
-
 > Have match info be displayed in a graph for visual interpretation.
