@@ -4,7 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="" />
+    <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/PlayerStatsBO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/PlayerStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/TheApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/TheApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/bo/SkillsAssessmentSquashTechnicalBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/SkillsAssessmentSquashTechnicalBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/bo/SkillsAssessmentSquashTechnicalValidationBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/SkillsAssessmentSquashTechnicalValidationBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/controllers/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/controllers/ReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/ReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/controllers/SkillsAssessmentSquashTechnicalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/SkillsAssessmentSquashTechnicalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/dao/SkillsAssessmentSquashTechnicalDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/dao/SkillsAssessmentSquashTechnicalDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/entity/ReportSquash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/ReportSquash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/entity/SkillsAssessmentSquashTechnicalDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/SkillsAssessmentSquashTechnicalDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/entity/Translate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/exception/AllAttributesNeededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/exception/AllAttributesNeededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/graphql/SkillsAssessmentSquashTechnicalGraphQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalGraphQLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/graphql/SkillsAssessmentSquashTechnicalInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/jpa/entity/CodeValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/CodeValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/jpa/entity/CodeValueId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/CodeValueId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/jpa/entity/SkillsAssessmentSquashTechnical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/SkillsAssessmentSquashTechnical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/repositories/CodeValueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/repositories/CodeValueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/repositories/SkillsAssessmentSquashTechnicalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/repositories/SkillsAssessmentSquashTechnicalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/rest/SkillsAssessmentSquashTechnicalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/rest/SkillsAssessmentSquashTechnicalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/rest/TestSecureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/rest/TestSecureRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/security/SecurityHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/security/SecurityHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/CisUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/CisUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/CisUtilityFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/CisUtilityFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/CisUtilityNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/CisUtilityNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/DatabaseUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/DatabaseUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/squash/util/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/util/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashName.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/report/reportSquashScore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ca/hccis/squash/bo/SkillsAssessmentSquashTechnicalBOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ca/hccis/fortnite/bo/SkillsAssessmentSquashTechnicalBOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ca/hccis/squash/rest/SkillsAssessmentSquashTechnicalServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ca/hccis/fortnite/rest/SkillsAssessmentSquashTechnicalServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/report/reportSquashName.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/report/reportSquashName.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/report/reportSquashScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/report/reportSquashScore.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,54 +134,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TheApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Database Script.createDatabase.sql.executor&quot;: &quot;Run&quot;,
-    &quot;Database Script.createDatabase1.sql.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SkillsAssessmentSquashTechnicalServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.squash_skills [package].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TheApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/College Work/Fall 2026/cis2232/Ben Project/cis2232_f26_project_proulx_ben/Project/fortnite_ranked_system&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TheApplication.executor": "Run",
+    "Database Script.createDatabase.sql.executor": "Run",
+    "Database Script.createDatabase1.sql.executor": "Run",
+    "JUnit.SkillsAssessmentSquashTechnicalServiceTest.executor": "Run",
+    "Maven.squash_skills [package].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.TheApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "S2---Report",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/College Work/Fall 2026/cis2232/Ben Project/cis2232_f26_project_proulx_ben/Project/fortnite_ranked_system",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;RunConfigurationTargetLRU&quot;: [
-      &quot;9963e351-9170-481d-b1dc-8815ba433aea&quot;,
-      &quot;b60683e5-721a-4744-8191-aafa53944307&quot;,
-      &quot;3434da5e-405c-4baa-9c88-b6f214a4d11d&quot;,
-      &quot;fa7dea25-c5e1-42f5-8507-f4b65e3ca148&quot;
+    "RunConfigurationTargetLRU": [
+      "9963e351-9170-481d-b1dc-8815ba433aea",
+      "b60683e5-721a-4744-8191-aafa53944307",
+      "3434da5e-405c-4baa-9c88-b6f214a4d11d",
+      "fa7dea25-c5e1-42f5-8507-f4b65e3ca148"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MariaDB&quot;,
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MariaDB",
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\resources\templates\report" />
@@ -143,6 +191,10 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca\hccis\squash\bo" />
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ca.hccis.squash.entity" />
+      <recent name="ca.hccis.squash.bo" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TheApplication">
@@ -162,12 +214,12 @@
       <module name="squash_skills" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.hccis.squash.rest.*" />
+          <option name="PATTERN" value="ca.hccis.fortnite.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ca.hccis.squash.rest" />
-      <option name="MAIN_CLASS_NAME" value="ca.hccis.squash.rest.SkillsAssessmentSquashTechnicalServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="ca.hccis.fortnite.rest.SkillsAssessmentSquashTechnicalServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,7 +228,7 @@
     <configuration name="TheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="squash_skills" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.squash.TheApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.fortnite.TheApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

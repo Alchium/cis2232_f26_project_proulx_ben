@@ -42,7 +42,7 @@ label {
         <button style="display:block;margin-top:24px!important" class="centered">Submit</button>
     </form>
 
-    <p th:if="${not #strings.isEmpty(message)}" th:text="#{error.message.no.data.found.name}">not found</p>
+    <p th:if="${not #strings.isEmpty(message)}" th:text="#{error.message.no.data.found.player}">not found</p>
     <!--https://stackoverflow.com/a/33106495-->
     <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.skillsAssessmentSquashTechnicals)}">
         <thead>
