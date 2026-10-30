@@ -1,6 +1,5 @@
 # Initial S1 db setup
 
-DROP DATABASE IF EXISTS cis2232_fortnite_tracker;
 DROP DATABASE IF EXISTS cis2232_fortnite_ranked_system;
 CREATE DATABASE cis2232_fortnite_ranked_system;
 use cis2232_fortnite_ranked_system;

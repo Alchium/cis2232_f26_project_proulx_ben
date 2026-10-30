@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Documentation/~$oject_Topic_Document_FortniteTracker_Ben.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/mysql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/mysql/createDatabase.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +115,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Drago/Documents/GitHub/cis2232_f26_project_proulx_ben/Project/fortnite_ranked_system",
+    "last_opened_file_path": "D:/College Work/Fall 2026/cis2232/Ben Project/cis2232_f26_project_proulx_ben/Project/fortnite_ranked_system",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -148,7 +152,7 @@
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.createDatabase.sql">
+  <component name="RunManager" selected="Spring Boot.TheApplication">
     <configuration name="createDatabase1.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase1.sql" />
       <script-mode>FILE</script-mode>
@@ -199,8 +203,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
       </set>
     </attachedChunks>
   </component>
@@ -262,6 +266,7 @@
       <workItem from="1787768161285" duration="2707000" />
       <workItem from="1787918193776" duration="18530000" />
       <workItem from="1789410012703" duration="620000" />
+      <workItem from="1791550207958" duration="2429000" />
     </task>
     <servers />
   </component>
