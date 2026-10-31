@@ -143,6 +143,7 @@ public class MatchEntryDAO {
             matchEntry.setRankProgress(rs.getFloat("rankProgress"));
 
             matchEntry.setEliminations(rs.getInt("eliminations"));
+            matchEntry.setPlacement(rs.getInt("placement"));
             matchEntry.setWin(rs.getBoolean("win"));
 
             matchEntry.setMatchDate(rs.getString("matchDate"));

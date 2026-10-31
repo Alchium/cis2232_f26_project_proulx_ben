@@ -36,6 +36,9 @@ public class MatchEntry {
     @Column(name = "eliminations")
     private Integer eliminations;
 
+    @Column(name = "placement")
+    private Integer placement;
+
     @Column(name = "win")
     private Boolean win;
 
@@ -87,6 +90,14 @@ public class MatchEntry {
 
     public void setEliminations(Integer eliminations) {
         this.eliminations = eliminations;
+    }
+
+    public Integer getPlacement() {
+        return placement;
+    }
+
+    public void setPlacement(Integer placement) {
+        this.placement = placement;
     }
 
     public Boolean getWin() {

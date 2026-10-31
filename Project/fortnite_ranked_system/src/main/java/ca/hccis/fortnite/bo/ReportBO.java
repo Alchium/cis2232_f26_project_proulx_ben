@@ -100,18 +100,54 @@ public class ReportBO {
             PlayerStats playerStats = new PlayerStats(current);
 
             int totalEliminations = 0;
+            int matchesPlayed = 0;
             int totalWins = 0;
+            int totalPlacement = 0;
+            double winAverage = 0;
+            double eliminationAverage = 0;
+            double placementAverage = 0;
 
             if (current.getPlayerName().equalsIgnoreCase(reportInput.getName())) {
                 totalEliminations += current.getEliminations();
+                totalPlacement += current.getPlacement();
+                matchesPlayed += 1;
 
                 if (current.getWin()) {
                     totalWins += 1;
                 }
+
+
+
+
+
+
+
+//            public static double calculateAveragePlacement(PlayerStats stats) {
+//        if (stats == null || stats.getMatchesPlayed() <= 0 || stats.getTotalPlacement() < 0) {
+//            return 0;
+//        }
+//        return (double) stats.getTotalPlacement() / stats.getMatchesPlayed();
+//    }
+
+                // Rank change progress
+            /*if (stats == null) {
+            return 0;
+            }
+            return stats.getRankProgress() - stats.getPreviousRankProgress()*/
+
             }
 
+
+            placementAverage = totalPlacement / matchesPlayed * 100.00;
+            winAverage = totalWins / matchesPlayed * 100.00;
+            eliminationAverage = totalEliminations / matchesPlayed * 100.00;
+
             playerStats.setEliminations(totalEliminations);
+            playerStats.setMatchesPlayed(matchesPlayed);
             playerStats.setWins(totalWins);
+            playerStats.setEliminationAverage(eliminationAverage);
+            playerStats.setPlacementAverage(placementAverage);
+            playerStats.setWinAverage(winAverage);
             playerStats.setPlayerName(reportInput.getName());
             playerStatsList.add(playerStats);
         }

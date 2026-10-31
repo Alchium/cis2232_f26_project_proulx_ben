@@ -21,7 +21,10 @@ public class PlayerStats {
     private double previousRankProgress;  // % progress before the latest update
     private int matchesPlayed;
     private int eliminations;
+    private double eliminationAverage;
+    private double placementAverage;
     private int wins;
+    private double winAverage;
     private MatchEntry matchEntry;
 
     public PlayerStats(MatchEntry matchEntry) {
@@ -76,12 +79,36 @@ public class PlayerStats {
         this.eliminations = eliminations;
     }
 
+    public double getEliminationAverage() {
+        return eliminationAverage;
+    }
+
+    public void setEliminationAverage(double eliminationAverage) {
+        this.eliminationAverage = eliminationAverage;
+    }
+
+    public double getPlacementAverage() {
+        return placementAverage;
+    }
+
+    public void setPlacementAverage(double placementAverage) {
+        this.placementAverage = placementAverage;
+    }
+
     public int getWins() {
         return wins;
     }
 
     public void setWins(int wins) {
         this.wins = wins;
+    }
+
+    public double getWinAverage() {
+        return winAverage;
+    }
+
+    public void setWinAverage(double winAverage) {
+        this.winAverage = winAverage;
     }
 
     public MatchEntry getMatchEntry() {
