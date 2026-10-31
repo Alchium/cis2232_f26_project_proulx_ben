@@ -2,11 +2,7 @@ package ca.hccis.fortnite.controllers;
 
 import ca.hccis.fortnite.bo.MatchEntryBO;
 import ca.hccis.fortnite.bo.ReportBO;
-import ca.hccis.fortnite.bo.SkillsAssessmentSquashTechnicalBO;
-import ca.hccis.fortnite.dao.SkillsAssessmentSquashTechnicalDAO;
-import ca.hccis.fortnite.entity.PlayerStats;
 import ca.hccis.fortnite.entity.ReportInput;
-import ca.hccis.fortnite.entity.ReportSquash;
 import ca.hccis.fortnite.jpa.entity.MatchEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -11,7 +11,7 @@ CREATE TABLE MatchEntry (
                               rankProgress      DECIMAL(5,2)    NOT NULL,
                               eliminations      INT             NOT NULL,
                               win               BOOL            NOT NULL,
-                              matchDate         VARCHAR(10)    NOT NULL,
+                              matchDate         VARCHAR(10)     NOT NULL,
                               matchTime         VARCHAR(10)     NOT NULL,
                               PRIMARY KEY (matchId)
 );

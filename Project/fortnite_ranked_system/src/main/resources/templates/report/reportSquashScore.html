@@ -30,7 +30,7 @@ label {
 <div class="container has-text-centered">
     <h2 class="title is-2" th:text="#{label.report.score.range}">_</h2>
 
-    <form th:action="@{/report/squash/score/submit}" method="post" class="wbb"
+    <form th:action="@{/report/player/score/submit}" method="post" class="wbb"
           style="display:inline-block;text-align:left!important">
         <label for="minScore">Min Score: </label><br/>
         <input id="minScore" type="number" th:field="${reportInput.minScore}"><br/>

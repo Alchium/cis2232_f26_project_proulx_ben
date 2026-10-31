@@ -15,6 +15,7 @@ public class ReportInput {
     private String endDate;
 
     private ArrayList<MatchEntry> fortniteMatches;
+    private ArrayList<PlayerStats> playerStatsList;
 
     public String getName() {
         return name;
@@ -40,7 +41,13 @@ public class ReportInput {
         this.endDate = endDate;
     }
 
+    public ArrayList<PlayerStats> getPlayerStatsList() {
+        return playerStatsList;
+    }
 
+    public void setPlayerStatsList(ArrayList<PlayerStats> playerStatsList) {
+        this.playerStatsList = playerStatsList;
+    }
 
     public ArrayList<MatchEntry> getFortniteMatches() {
         return fortniteMatches;

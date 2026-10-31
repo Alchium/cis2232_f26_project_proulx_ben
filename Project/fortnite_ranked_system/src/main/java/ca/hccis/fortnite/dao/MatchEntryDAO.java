@@ -10,7 +10,7 @@ import java.util.*;
 public class MatchEntryDAO {
     private static ResultSet rs;
     private static Connection conn = null;
-    private static final Logger logger = LoggerFactory.getLogger(SkillsAssessmentSquashTechnicalDAO.class);
+    private static final Logger logger = LoggerFactory.getLogger(MatchEntryDAO.class);
 
     public MatchEntryDAO() {
 
@@ -88,7 +88,7 @@ public class MatchEntryDAO {
      * @since 20261009
      * @author BJM
      */
-    public static ArrayList<MatchEntry> selectAllByPlayerName(String name) {
+    public ArrayList<MatchEntry> selectAllByPlayerName(String name) {
         ArrayList<MatchEntry> fortniteMatches = null;
         Statement stmt = null;
 
