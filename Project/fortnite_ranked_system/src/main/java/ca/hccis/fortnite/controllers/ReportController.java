@@ -1,5 +1,7 @@
 package ca.hccis.fortnite.controllers;
 
+import ca.hccis.fortnite.bo.MatchEntryBO;
+import ca.hccis.fortnite.bo.ReportBO;
 import ca.hccis.fortnite.bo.SkillsAssessmentSquashTechnicalBO;
 import ca.hccis.fortnite.dao.SkillsAssessmentSquashTechnicalDAO;
 import ca.hccis.fortnite.entity.PlayerStats;
@@ -76,8 +78,8 @@ public class ReportController {
         System.out.println("Name from input form:" + reportInput.getName());
 
         //Get all the applicable squash matches from the database
-        SquashMatchBO squashMatchBO = new SquashMatchBO();
-        ArrayList<MatchEntry> theList = squashMatchBO.processSelectAllByName(reportInput.getName());
+        MatchEntryBO matchEntryBO = new MatchEntryBO();
+        ArrayList<MatchEntry> theList = matchEntryBO.processSelectAllByPlayerName(reportInput.getName());
         reportInput.setFortniteMatches(theList);
 
         //Add a message in case the report does not contain any data
@@ -105,8 +107,8 @@ public class ReportController {
         logger.info("Running the reports controller player score method");
 
         //get a list of all the player names
-        SquashMatchBO squashMatchBO = new SquashMatchBO();
-        ArrayList<String> players = squashMatchBO.getAllPlayerNames();
+        MatchEntryBO matchEntryBO = new MatchEntryBO();
+        ArrayList<String> players = matchEntryBO.getAllPlayerNames();
         session.setAttribute("players", players);
 
         model.addAttribute("reportInput", new ReportInput());

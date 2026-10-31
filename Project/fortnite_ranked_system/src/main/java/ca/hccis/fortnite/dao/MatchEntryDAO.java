@@ -88,7 +88,7 @@ public class MatchEntryDAO {
      * @since 20261009
      * @author BJM
      */
-    public ArrayList<MatchEntry> selectAllByName(String name) {
+    public static ArrayList<MatchEntry> selectAllByPlayerName(String name) {
         ArrayList<MatchEntry> fortniteMatches = null;
         Statement stmt = null;
 
