@@ -18,7 +18,7 @@ public class PlayerStats {
     private String playerName;
     private String currentRank;
     private double rankProgress;          // current % progress within the rank
-    private double previousRankProgress;  // % progress before the latest update
+    private double rankDifference;  // % progress before the latest update
     private int matchesPlayed;
     private int eliminations;
     private double eliminationAverage;
@@ -26,6 +26,10 @@ public class PlayerStats {
     private int wins;
     private double winAverage;
     private MatchEntry matchEntry;
+
+    public PlayerStats() {
+
+    }
 
     public PlayerStats(MatchEntry matchEntry) {
         this.matchEntry = matchEntry;
@@ -55,12 +59,12 @@ public class PlayerStats {
         this.rankProgress = rankProgress;
     }
 
-    public double getPreviousRankProgress() {
-        return previousRankProgress;
+    public double getRankDifference() {
+        return rankDifference;
     }
 
-    public void setPreviousRankProgress(double previousRankProgress) {
-        this.previousRankProgress = previousRankProgress;
+    public void setRankDifference(double rankDifference) {
+        this.rankDifference = rankDifference;
     }
 
     public int getMatchesPlayed() {

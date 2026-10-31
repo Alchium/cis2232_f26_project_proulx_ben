@@ -51,11 +51,11 @@ public class ReportController {
      * @author BJM
      * @since 2025-10-06
      */
-    @RequestMapping("/player/name")
-    public String reportPlayerName(Model model) {
+    @RequestMapping("/player/matches")
+    public String reportPlayerMatches(Model model) {
         logger.info("Running the reports controller player score method");
         model.addAttribute("reportInput", new ReportInput());
-        return "report/reportPlayerName";
+        return "report/reportPlayerMatches";
     }
 
 
@@ -68,8 +68,8 @@ public class ReportController {
      * @author BJM
      * @since 2025-10-06
      */
-    @RequestMapping("/player/name/submit")
-    public String reportPlayerNameSubmit(Model model, @ModelAttribute("reportInput") ReportInput reportInput) {
+    @RequestMapping("/player/matches/submit")
+    public String reportPlayerMatchesSubmit(Model model, @ModelAttribute("reportInput") ReportInput reportInput) {
 
         System.out.println("Name from input form:" + reportInput.getName());
 
@@ -87,7 +87,7 @@ public class ReportController {
         //Put object in model so it can be used on the view (html)
         model.addAttribute("reportInput", reportInput);
 
-        return "report/reportPlayerName"; //Send user to another view.
+        return "report/reportPlayerMatches"; //Send user to another view.
     }
 
     /**
@@ -98,8 +98,8 @@ public class ReportController {
      * @author BJM
      * @since 2026-10-16
      */
-    @RequestMapping("/player/score")
-    public String reportPlayerScore(Model model, HttpSession session) {
+    @RequestMapping("/player/overall")
+    public String reportPlayerOverall(Model model, HttpSession session) {
         logger.info("Running the reports controller player score method");
 
         //get a list of all the player names
@@ -108,7 +108,7 @@ public class ReportController {
         session.setAttribute("players", players);
 
         model.addAttribute("reportInput", new ReportInput());
-        return "report/reportPlayerScore";
+        return "report/reportPlayerOverall";
     }
 
     /**
@@ -120,8 +120,8 @@ public class ReportController {
      * @author BJM
      * @since 2026-10-19
      */
-    @RequestMapping("/player/score/submit")
-    public String reportPlayerScoreSubmit(Model model, @ModelAttribute("reportInput") ReportInput reportInput) {
+    @RequestMapping("/player/overall/submit")
+    public String reportPlayerOverallSubmit(Model model, @ModelAttribute("reportInput") ReportInput reportInput) {
 
         System.out.println("Name from input form:" + reportInput.getName());
 
@@ -136,7 +136,7 @@ public class ReportController {
         //Put object in model so it can be used on the view (html)
         model.addAttribute("reportInput", reportInput);
 
-        return "report/reportPlayerScore"; //Send user to another view.
+        return "report/reportPlayerOverall"; //Send user to another view.
     }
 
 

@@ -22,60 +22,67 @@ public class ReportBO {
 
         //Process through the matches and get score summaries.
         ArrayList<PlayerStats> playerStatsList = new ArrayList<>();
+        PlayerStats playerStats = new PlayerStats();
 
-        for (int i = 0; i < theList.size(); i++ ) {
+        int matchesPlayed = 0;
+        int totalEliminations = 0;
+        int totalPlacement = 0;
+        int totalWins = 0;
+        String currentRank = "";
+        double rankProgress = 0.0;
+        double rankDifference = 0.0;
+        double eliminationAverage = 0.0;
+        double placementAverage = 0.0;
+        double winAverage = 0.0;
+
+        for (int current = 0; current < theList.size(); current++ ) {
 
             //filter out if match is before the start date
             if (reportInput.getStartDate() != null && !reportInput.getStartDate().isEmpty()) {
-                if (theList.get(i).getMatchDate().compareTo(reportInput.getStartDate()) < 0) {
-                    System.out.println("Skipping match " + theList.get(i).getMatchDate() + " because it is before the start date");
+                if (theList.get(current).getMatchDate().compareTo(reportInput.getStartDate()) < 0) {
+                    System.out.println("Skipping match " + theList.get(current).getMatchDate() + " because it is before the start date");
                     continue;
                 }
             }
             //filter out if match is after the date
             if (reportInput.getEndDate() != null && !reportInput.getEndDate().isEmpty()) {
-                if (theList.get(i).getMatchDate().compareTo(reportInput.getEndDate()) > 0) {
-                    System.out.println("Skipping match " + theList.get(i).getMatchDate() + " because it is after the end date");
+                if (theList.get(current).getMatchDate().compareTo(reportInput.getEndDate()) > 0) {
+                    System.out.println("Skipping match " + theList.get(current).getMatchDate() + " because it is after the end date");
                     continue;
                 }
             }
 
-            PlayerStats playerStats = new PlayerStats(theList.get(i));
-
-            int matchesPlayed = 0;
-            int totalEliminations = 0;
-            int totalPlacement = 0;
-            int totalWins = 0;
-            double rankDifference = 0.0;
-            double eliminationAverage = 0.0;
-            double placementAverage = 0.0;
-            double winAverage = 0.0;
-
-            if (theList.get(i).getPlayerName().equalsIgnoreCase(reportInput.getName())) {
-                totalEliminations += theList.get(i).getEliminations();
-                totalPlacement += theList.get(i).getPlacement();
+            if (theList.get(current).getPlayerName().equalsIgnoreCase(reportInput.getName())) {
+                totalEliminations += theList.get(current).getEliminations();
+                totalPlacement += theList.get(current).getPlacement();
                 matchesPlayed += 1;
 
-                if (theList.get(i).getWin()) {
+                if (theList.get(current).getWin()) {
                     totalWins += 1;
                 }
             }
 
-            rankDifference = theList.get(i).getRankProgress()-theList.get(i+1).getRankProgress();
-
-            placementAverage = totalPlacement / matchesPlayed * 100.00;
-            winAverage = totalWins / matchesPlayed * 100.00;
-            eliminationAverage = totalEliminations / matchesPlayed * 100.00;
-
-            playerStats.setEliminations(totalEliminations);
-            playerStats.setMatchesPlayed(matchesPlayed);
-            playerStats.setWins(totalWins);
-            playerStats.setEliminationAverage(eliminationAverage);
-            playerStats.setPlacementAverage(placementAverage);
-            playerStats.setWinAverage(winAverage);
-            playerStats.setPlayerName(reportInput.getName());
-            playerStatsList.add(playerStats);
+            rankDifference = theList.get(current).getRankProgress()/*-theList.get(i-1).getRankProgress()*/;
+            currentRank = theList.get(current).getCurrentRank();
+            rankProgress = theList.get(current).getRankProgress();
         }
+
+        placementAverage = (double) totalPlacement / matchesPlayed;
+        winAverage = (double) totalWins / matchesPlayed * 100.00;
+        eliminationAverage = (double) totalEliminations / matchesPlayed;
+
+        playerStats.setCurrentRank(currentRank);
+        playerStats.setRankProgress(rankProgress);
+        playerStats.setRankDifference(rankDifference);
+        playerStats.setEliminations(totalEliminations);
+        playerStats.setMatchesPlayed(matchesPlayed);
+        playerStats.setWins(totalWins);
+        playerStats.setEliminationAverage(eliminationAverage);
+        playerStats.setPlacementAverage(placementAverage);
+        playerStats.setWinAverage(winAverage);
+        playerStats.setPlayerName(reportInput.getName());
+        playerStatsList.add(playerStats);
+
         reportInput.setPlayerStatsList(playerStatsList);
     }
 }

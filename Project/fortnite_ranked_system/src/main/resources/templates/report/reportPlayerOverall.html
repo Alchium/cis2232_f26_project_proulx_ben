@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+    <title id="pageTitle">Report</title>
+</head>
+<body>
+<style scoped="scoped">input:not(.hidden) {
+    display: inline-block;
+    float: right
+}
+
+.cd {
+    color: #F00 !important;
+    font-weight: bold;
+    margin-bottom: -48px
+}
+
+label {
+    margin-right: 8px
+}</style>
+<nav th:replace="fragments/navHeader :: navbar"></nav>
+
+
+<div class="container has-text-centered">
+    <h2 class="title is-2" th:text="#{label.report.overall}">_</h2>
+
+    <form th:action="@{/report/player/overall/submit}" method="post" class="wbb"
+          style="display:inline-block;text-align:left!important">
+        <label for="playerSelect">Choose a player:</label>
+        <select id="playerSelect" th:field="${reportInput.name}">
+            <option value="">-- Select --</option>
+            <option th:each="name : ${session.players}" th:value="${name}" th:text="${name}"></option>
+        </select>
+        <br/>
+        <label for="start-date">Select Start Date:</label>
+        <input type="date" id="start-date" th:field="${reportInput.startDate}"/>
+        <br/>
+        <label for="end-date">Select End Date:</label>
+        <input type="date" id="end-date" th:field="${reportInput.endDate}"/>
+
+
+        <br></br>
+        <button style="display:block;margin-top:24px!important" class="centered">Submit</button>
+    </form>
+
+    <p th:if="${not #strings.isEmpty(message)}" th:text="#{error.message.no.data.found.player}">not found</p>
+    <!--https://stackoverflow.com/a/33106495-->
+    <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.playerStatsList)}">
+        <thead>
+        <tr>
+            <th>Player name |</th>
+            <th>Current Rank |</th>
+            <th>Rank Progress |</th>
+            <th>Rank Difference |</th>
+            <th>Eliminations |</th>
+            <th>Elimination Average |</th>
+            <th>Placement Average |</th>
+            <th>Wins |</th>
+            <th>Win Average |</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item,iterStat : ${reportInput.playerStatsList}">
+            <td th:text="${item.playerName}"></td>
+            <td th:text="${item.currentRank}"></td>
+            <td th:text="${item.rankProgress}"></td>
+            <td th:text="${item.rankDifference}"></td>
+            <td th:text="${item.eliminations}"></td>
+            <td th:text="${item.eliminationAverage}"></td>
+            <td th:text="${item.placementAverage}"></td>
+            <td th:text="${item.wins}"></td>
+            <td th:text="${item.winAverage}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<br></br>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>
