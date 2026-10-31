@@ -106,7 +106,7 @@ public class MatchEntryDAO {
             stmt = conn.createStatement();
             String sqlStatement = "select * from matchentry " +
                     "where playerName like '%"+name+"%'" +
-                    " ORDER BY matchDate;";
+                    " ORDER BY matchDate AND matchTime;";
             rs = stmt.executeQuery(sqlStatement);
 
             //******************************************************************
