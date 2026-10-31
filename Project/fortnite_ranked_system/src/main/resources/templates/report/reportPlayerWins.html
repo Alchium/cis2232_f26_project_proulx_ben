@@ -32,11 +32,11 @@ label {
 
     <form th:action="@{/report/player/score/submit}" method="post" class="wbb"
           style="display:inline-block;text-align:left!important">
-        <label for="minScore">Min Score: </label><br/>
-        <input id="minScore" type="number" th:field="${reportInput.minScore}"><br/>
+        <label for="minWins">Min Wins: </label><br/>
+        <input id="minWins" type="number" th:field="${reportInput.minWins}"><br/>
 
-        <label>Max Score: </label><br/>
-        <input type="number" th:field="${reportInput.maxScore}"><br/>
+        <label>Max Wins: </label><br/>
+        <input type="number" th:field="${reportInput.maxWins}"><br/>
 
         <br/>
         <button style="display:block;margin-top:24px!important" class="centered">Submit</button>
