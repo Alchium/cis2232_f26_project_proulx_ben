@@ -1,6 +1,10 @@
 package ca.hccis.fortnite.bo;
 
+import ca.hccis.fortnite.dao.PlayerStatsDAO;
 import ca.hccis.fortnite.entity.PlayerStats;
+import ca.hccis.fortnite.util.CisUtilityFile;
+
+import java.util.ArrayList;
 
 /**
  * Business object containing the ranked statistic calculations for the
@@ -72,5 +76,21 @@ public class PlayerStatsBO {
             return 0;
         }
         return stats.getRankProgress() - stats.getPreviousRankProgress();
+    }
+
+    public ArrayList<PlayerStats> processSelectAllByPlayerName(String name) {
+
+        //**********************************************************************
+        // This could be done using the repository but there will be times when
+        // jdbc will be useful.  For the reports, the requirements state that you
+        // are to use jdbc to obtain the data for the report.
+        //**********************************************************************
+        PlayerStatsDAO playerStatsDAO = new PlayerStatsDAO();
+        ArrayList<PlayerStats> matches = playerStatsDAO.selectAllByPlayerName(name);
+
+        //Also write the report to a file
+        CisUtilityFile.writeReportToFile("playerStatsReport", matches);
+
+        return matches;
     }
 }

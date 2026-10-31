@@ -22,9 +22,9 @@ label {
 
 
 <div class="container has-text-centered">
-    <h2 class="title is-2" th:text="#{label.report.athlete.assessor.report}">_</h2>
+    <h2 class="title is-2" th:text="#{label.report.player.report}">_</h2>
 
-    <form th:action="@{/report/squash/name/submit}" method="post" class="wbb"
+    <form th:action="@{/report/player/name/submit}" method="post" class="wbb"
           style="display:inline-block;text-align:left!important">
         <label>Name (Athlete/Assessor): </label>
         <input type="text" th:field="${reportInput.name}"></input>
@@ -34,7 +34,7 @@ label {
 
     <p th:if="${not #strings.isEmpty(message)}" th:text="#{error.message.no.data.found.player}">not found</p>
     <!--https://stackoverflow.com/a/33106495-->
-    <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.skillsAssessmentSquashTechnicals)}">
+    <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.matchEntries)}">
         <thead>
         <tr>
             <th>ID</th>
@@ -52,7 +52,7 @@ label {
         </tr>
         </thead>
         <tbody>
-        <tr th:each="item,iterStat : ${reportInput.skillsAssessmentSquashTechnicals}">
+        <tr th:each="item,iterStat : ${reportInput.matchEntries}">
             <td th:text="${item.id}"></td>
             <td th:text="${item.assessmentDate}"></td>
             <td th:text="${item.createdDateTime}"></td>

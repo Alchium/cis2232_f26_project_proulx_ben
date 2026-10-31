@@ -2,8 +2,10 @@ package ca.hccis.fortnite.controllers;
 
 import ca.hccis.fortnite.bo.SkillsAssessmentSquashTechnicalBO;
 import ca.hccis.fortnite.dao.SkillsAssessmentSquashTechnicalDAO;
+import ca.hccis.fortnite.entity.PlayerStats;
+import ca.hccis.fortnite.entity.ReportInput;
 import ca.hccis.fortnite.entity.ReportSquash;
-import ca.hccis.fortnite.jpa.entity.SkillsAssessmentSquashTechnical;
+import ca.hccis.fortnite.jpa.entity.MatchEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -44,33 +46,18 @@ public class ReportController {
     }
 
     /**
-     * Method to send user to the athlete/assessor name report.
+     * Method to send user to the player name report.
      *
      * @param model
      * @return view for list
      * @author BJM
      * @since 2025-10-06
      */
-    @RequestMapping("/fortnite/name")
-    public String reportSquashName(Model model) {
-        logger.info("Running the reports controller squash name method");
-        model.addAttribute("reportInput",new ReportSquash());
-        return "report/reportSquashName";
-    }
-
-    /**
-     * Method to send user to the score name report.
-     *
-     * @param model
-     * @return view for list
-     * @author BJM
-     * @since 2025-10-09
-     */
-    @RequestMapping("/fortnite/score")
-    public String reportSquashScore(Model model) {
-        logger.info("Running the reports controller squash score method");
-        model.addAttribute("reportInput",new ReportSquash());
-        return "report/reportSquashScore";
+    @RequestMapping("/player/name")
+    public String reportPlayerName(Model model) {
+        logger.info("Running the reports controller player score method");
+        model.addAttribute("reportInput", new ReportInput());
+        return "report/reportPlayerName";
     }
 
 
@@ -78,65 +65,82 @@ public class ReportController {
      * Process the report - name
      *
      * @param model
-     * @param reportSquash Object containing inputs for the report
+     * @param reportInput Object containing inputs for the report
      * @return view to show report
      * @author BJM
      * @since 2025-10-06
      */
-    @RequestMapping("/fortnite/name/submit")
-    public String reportSquashNameSubmit(Model model, @ModelAttribute("reportInput") ReportSquash reportSquash) {
+    @RequestMapping("/player/name/submit")
+    public String reportPlayerNameSubmit(Model model, @ModelAttribute("reportInput") ReportInput reportInput) {
 
-        System.out.println("Name from input form:"+reportSquash.getName());
+        System.out.println("Name from input form:" + reportInput.getName());
 
-        //Write some model code to go to the db and get the appropriate assessments
-        //Add them to a collection in the ReportSquash class
-        SkillsAssessmentSquashTechnicalBO skillsAssessmentSquashTechnicalBO = new SkillsAssessmentSquashTechnicalBO();
-        ArrayList<SkillsAssessmentSquashTechnical> theList = skillsAssessmentSquashTechnicalBO.processSelectAllByAthleteAssessorName(reportSquash.getName());
-        reportSquash.setSkillsAssessmentSquashTechnicals(theList);
+        //Get all the applicable squash matches from the database
+        SquashMatchBO squashMatchBO = new SquashMatchBO();
+        ArrayList<MatchEntry> theList = squashMatchBO.processSelectAllByName(reportInput.getName());
+        reportInput.setFortniteMatches(theList);
 
         //Add a message in case the report does not contain any data
         if (theList != null && theList.isEmpty()) {
-            model.addAttribute("message", "No assessments found for that name");
+            model.addAttribute("message", "No matches found for that name");
             System.out.println("BJM - no data found");
         }
 
         //Put object in model so it can be used on the view (html)
-        model.addAttribute("reportInput", reportSquash);
+        model.addAttribute("reportInput", reportInput);
 
-        return "report/reportSquashName"; //Send user to another view.
+        return "report/reportPlayerName"; //Send user to another view.
+    }
+
+    /**
+     * Method to send user to the player score report.
+     *
+     * @param model
+     * @return view for list
+     * @author BJM
+     * @since 2026-10-16
+     */
+    @RequestMapping("/player/score")
+    public String reportPlayerScore(Model model, HttpSession session) {
+        logger.info("Running the reports controller player score method");
+
+        //get a list of all the player names
+        SquashMatchBO squashMatchBO = new SquashMatchBO();
+        ArrayList<String> players = squashMatchBO.getAllPlayerNames();
+        session.setAttribute("players", players);
+
+        model.addAttribute("reportInput", new ReportInput());
+        return "report/reportPlayerScore";
     }
 
     /**
      * Process the report - name
      *
      * @param model
-     * @param reportSquash Object containing inputs for the report
+     * @param reportInput Object containing inputs for the report
      * @return view to show report
      * @author BJM
-     * @since 2025-10-06
+     * @since 2026-10-19
      */
-    @RequestMapping("/fortnite/score/submit")
-    public String reportSquashScoreSubmit(Model model, @ModelAttribute("reportInput") ReportSquash reportSquash) {
+    @RequestMapping("/player/score/submit")
+    public String reportPlayerScoreSubmit(Model model, @ModelAttribute("reportInput") ReportInput reportInput) {
 
-        System.out.println("Min from input form:"+reportSquash.getMinScore());
+        System.out.println("Name from input form:" + reportInput.getName());
 
-        //Write some model code to go to the db and get the appropriate assessments
-        //Add them to a collection in the ReportSquash class
-        SkillsAssessmentSquashTechnicalDAO squashDAO = new SkillsAssessmentSquashTechnicalDAO();
-        ArrayList<SkillsAssessmentSquashTechnical> theList = squashDAO.selectAllByScoreMinMax(reportSquash.getMinScore(), reportSquash.getMaxScore());
-        reportSquash.setSkillsAssessmentSquashTechnicals(theList);
+        ReportBO.processPlayerScoreReport(reportInput);
 
         //Add a message in case the report does not contain any data
-        if (theList != null && theList.isEmpty()) {
-            model.addAttribute("message", "No assessments found for that name");
+        if (reportInput.getFortniteMatches() != null && reportInput.getFortniteMatches().isEmpty()) {
+            model.addAttribute("message", "No matches found for that name");
             System.out.println("BJM - no data found");
         }
 
         //Put object in model so it can be used on the view (html)
-        model.addAttribute("reportInput", reportSquash);
+        model.addAttribute("reportInput", reportInput);
 
-        return "report/reportSquashScore"; //Send user to another view.
+        return "report/reportPlayerScore"; //Send user to another view.
     }
+
 
 
 }

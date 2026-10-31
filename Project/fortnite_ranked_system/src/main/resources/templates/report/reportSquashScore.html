@@ -44,7 +44,7 @@ label {
 
     <p th:if="${not #strings.isEmpty(message)}" th:text="#{error.message.no.data.found.player}">not found</p>
     <!--https://stackoverflow.com/a/33106495-->
-    <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.skillsAssessmentSquashTechnicals)}">
+    <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.matchEntries)}">
         <thead>
         <tr>
             <th>ID</th>
@@ -62,7 +62,7 @@ label {
         </tr>
         </thead>
         <tbody>
-        <tr th:each="item,iterStat : ${reportInput.skillsAssessmentSquashTechnicals}">
+        <tr th:each="item,iterStat : ${reportInput.matchEntries}">
             <td th:text="${item.id}"></td>
             <td th:text="${item.assessmentDate}"></td>
             <td th:text="${item.createdDateTime}"></td>

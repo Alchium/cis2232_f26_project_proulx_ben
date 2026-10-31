@@ -1,14 +1,14 @@
 package ca.hccis.fortnite.bo;
 
-import ca.hccis.fortnite.jpa.entity.SkillsAssessmentSquashTechnical;
+import ca.hccis.fortnite.jpa.entity.MatchEntry;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class SkillsAssessmentSquashTechnicalBOTest {
+class MatchEntryBOTest {
 
     @Test
     void calculateTechnicalScore_all1() {
-        SkillsAssessmentSquashTechnical squashSkillsAssessment= new SkillsAssessmentSquashTechnical();
+        MatchEntry squashSkillsAssessment= new MatchEntry();
         squashSkillsAssessment.setForehandDrives(1);
         squashSkillsAssessment.setBackhandDrives(1);
         squashSkillsAssessment.setBackhandVolleyMax(1);
@@ -24,7 +24,7 @@ class SkillsAssessmentSquashTechnicalBOTest {
 
     @Test
     void calculateTechnicalScore_FH_Drive1() {
-        SkillsAssessmentSquashTechnical squashSkillsAssessment= new SkillsAssessmentSquashTechnical();
+        MatchEntry squashSkillsAssessment= new MatchEntry();
         squashSkillsAssessment.setForehandDrives(1);
 
         int actual = SkillsAssessmentSquashTechnicalBO.calculateTechnicalScore(squashSkillsAssessment);
@@ -35,7 +35,7 @@ class SkillsAssessmentSquashTechnicalBOTest {
 
     @Test
     void calculateTechnicalScore_zeroValuesReturnsZero() {
-        SkillsAssessmentSquashTechnical squashSkillsAssessment = new SkillsAssessmentSquashTechnical();
+        MatchEntry squashSkillsAssessment = new MatchEntry();
 
         int actual = SkillsAssessmentSquashTechnicalBO.calculateTechnicalScore(squashSkillsAssessment);
 
@@ -45,7 +45,7 @@ class SkillsAssessmentSquashTechnicalBOTest {
 
     @Test
     void calculateTechnicalScore_mixedValues() {
-        SkillsAssessmentSquashTechnical squashSkillsAssessment = new SkillsAssessmentSquashTechnical();
+        MatchEntry squashSkillsAssessment = new MatchEntry();
         squashSkillsAssessment.setForehandDrives(2);
         squashSkillsAssessment.setBackhandDrives(3);
         squashSkillsAssessment.setForehandVolleyMax(1);

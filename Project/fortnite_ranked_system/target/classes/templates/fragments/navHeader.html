@@ -27,11 +27,11 @@
             </div>
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a th:href="@{/report}" href="/about" class="accent navbar-link">Reports</a>
+                    <a th:href="@{/report}" href="/about" class="accent navbar-link" th:text="#{label.reports}">Reports</a>
                     <div class="accent-background navbar-dropdown">
-                        <a th:href="@{/report/fortnite/name}" class="accent navbar-item"
+                        <a th:href="@{/report/player/name}" class="accent navbar-item"
                            th:text="#{label.report.player.report}">Name report-placeholder</a>
-                        <a th:href="@{/report/fortnite/score}" class="accent navbar-item"
+                        <a th:href="@{/report/player/score}" class="accent navbar-item"
                            th:text="#{label.report.score.range}">Score range report-placeholder</a>
                     </div>
                 </div>
