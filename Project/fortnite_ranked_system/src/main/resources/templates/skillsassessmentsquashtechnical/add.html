@@ -6,14 +6,14 @@
     <body>
         <nav th:replace="fragments/navHeader :: navbar"></nav>
         <div class="container has-text-centered">
-            <h2 class="title is-2" th:if= "${skillsAssessment.id != null}" th:text="#{label.edit.order}">label Edit</h2>
-            <h2 class="title is-2" th:if= "${skillsAssessment.id == null}" th:text="#{label.add.order}">label Add</h2>
+            <h2 class="title is-2" th:if= "${skillsAssessment.matchId != null}" th:text="#{label.edit.order}">label Edit</h2>
+            <h2 class="title is-2" th:if= "${skillsAssessment.matchId == null}" th:text="#{label.add.order}">label Add</h2>
 
 
             <form th:action="@{/skillsassessmentsquashtechnical/submit}" method="post" class="wbb" style="display:inline-block;text-align:left!important">
 
                 <!-- Hidden ID field -->
-                <input type="hidden" th:field="${skillsAssessment.id}" />
+                <input type="hidden" th:field="${skillsAssessment.matchId}" />
 
                 <p>
                     <label>Assessment Date:</label>

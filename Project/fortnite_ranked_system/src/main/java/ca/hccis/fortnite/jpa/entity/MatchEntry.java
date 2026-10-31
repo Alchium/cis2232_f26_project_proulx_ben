@@ -3,7 +3,6 @@ package ca.hccis.fortnite.jpa.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import java.util.Objects;
 
 @Entity
 @Table(name = "matchentry")
@@ -14,15 +13,10 @@ public class MatchEntry {
     @Transient
     private String skillsCode;
 
-    public MatchEntry() {
-        this.eliminations = 0;
-        this.wins = 0;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Integer id;
+    @Column(name = "matchId", nullable = false)
+    private Integer matchId;
 
     @Size(min=1, max = 10)
     @NotNull
@@ -37,25 +31,30 @@ public class MatchEntry {
     @Size( max = 5)
     @NotNull
     @Column(name = "rankProgress", nullable = false, length = 5)
-    private double athleteName;
+    private double rankProgress;
 
     @Column(name = "eliminations")
     private Integer eliminations;
 
-    @Column(name = "wins")
-    private Integer wins;
+    @Column(name = "win")
+    private Boolean win;
 
     @Size(max = 20)
     @NotNull
-    @Column(name = "lastUpdated", nullable = false, length = 20)
-    private String lastUpdated;
+    @Column(name = "matchDate", nullable = false, length = 20)
+    private String matchDate;
 
-    public Integer getId() {
-        return id;
+    @Size(max = 20)
+    @NotNull
+    @Column(name = "matchTime", nullable = false, length = 20)
+    private String matchTime;
+
+    public Integer getMatchId() {
+        return matchId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setMatchId(Integer matchId) {
+        this.matchId = matchId;
     }
 
     public String getPlayerName() {
@@ -74,12 +73,12 @@ public class MatchEntry {
         this.currentRank = currentRank;
     }
 
-    public double getAthleteName() {
-        return athleteName;
+    public double getRankProgress() {
+        return rankProgress;
     }
 
-    public void setAthleteName(double athleteName) {
-        this.athleteName = athleteName;
+    public void setRankProgress(double rankProgress) {
+        this.rankProgress = rankProgress;
     }
 
     public Integer getEliminations() {
@@ -90,20 +89,28 @@ public class MatchEntry {
         this.eliminations = eliminations;
     }
 
-    public Integer getWins() {
-        return wins;
+    public Boolean getWin() {
+        return win;
     }
 
-    public void setWins(Integer wins) {
-        this.wins = wins;
+    public void setWin(Boolean win) {
+        this.win = win;
     }
 
-    public String getLastUpdated() {
-        return lastUpdated;
+    public String getMatchDate() {
+        return matchDate;
     }
 
-    public void setLastUpdated(String lastUpdated) {
-        this.lastUpdated = lastUpdated;
+    public void setMatchDate(String matchDate) {
+        this.matchDate = matchDate;
+    }
+
+    public String getMatchTime() {
+        return matchTime;
+    }
+
+    public void setMatchTime(String matchTime) {
+        this.matchTime = matchTime;
     }
 
 }

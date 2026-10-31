@@ -42,7 +42,7 @@ class MatchEntryServiceTest {
 
         when(repo.save(any(MatchEntry.class))).thenAnswer(invocation -> {
             MatchEntry saved = invocation.getArgument(0);
-            saved.setId(1);
+            saved.setMatchId(1);
             return saved;
         });
 
@@ -50,7 +50,7 @@ class MatchEntryServiceTest {
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
-        assertEquals(1, response.getBody().getId());
+        assertEquals(1, response.getBody().getMatchId());
         assertEquals(56, response.getBody().getTechnicalScore());
         assertEquals("Jane Doe", response.getBody().getAthleteName());
 

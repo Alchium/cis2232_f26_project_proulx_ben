@@ -1,8 +1,6 @@
 package ca.hccis.fortnite.dao;
 
-import ca.hccis.fortnite.dao.SkillsAssessmentSquashTechnicalDAO;
 import ca.hccis.fortnite.jpa.entity.MatchEntry;
-import ca.hccis.fortnite.jpa.entity.SkillsAssessmentSquashTechnical;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -131,38 +129,28 @@ public class MatchEntryDAO {
         return fortniteMatches;
     }
 
-    public ArrayList<SquashMatch> loadList(ResultSet rs) throws SQLException {
-        ArrayList<SquashMatch> squashMatches = new  ArrayList();
+    public ArrayList<MatchEntry> loadList(ResultSet rs) throws SQLException {
+        ArrayList<MatchEntry> fortniteMatches = new  ArrayList();
 
         while (rs.next()) {
 
-            SquashMatch squashMatch = new SquashMatch();
-            squashMatch.setId(rs.getInt("id"));
-            squashMatch.setMatchDate(rs.getString("matchDate"));
-            squashMatch.setCreatedDateTime(rs.getString("createdDateTime"));
+            MatchEntry matchEntry = new MatchEntry();
+            matchEntry.setMatchId(rs.getInt("matchId"));
 
-            squashMatch.setPlayer1Name(rs.getString("player1Name"));
-            squashMatch.setPlayer2Name(rs.getString("player2Name"));
+            matchEntry.setPlayerName(rs.getString("playerName"));
 
-            squashMatch.setPlayer1Game1Score(rs.getByte("player1Game1Score"));
-            squashMatch.setPlayer2Game1Score(rs.getByte("player2Game1Score"));
+            matchEntry.setCurrentRank(rs.getString("currentRank"));
+            matchEntry.setRankProgress(rs.getFloat("rankProgress"));
 
-            squashMatch.setPlayer1Game2Score(rs.getByte("player1Game2Score"));
-            squashMatch.setPlayer2Game2Score(rs.getByte("player2Game2Score"));
+            matchEntry.setEliminations(rs.getInt("eliminations"));
+            matchEntry.setWin(rs.getBoolean("win"));
 
-            squashMatch.setPlayer1Game3Score(rs.getByte("player1Game3Score"));
-            squashMatch.setPlayer2Game3Score(rs.getByte("player2Game3Score"));
+            matchEntry.setMatchDate(rs.getString("matchDate"));
+            matchEntry.setMatchTime(rs.getString("matchTime"));
 
-            squashMatch.setPlayer1Game4Score(rs.getByte("player1Game4Score"));
-            squashMatch.setPlayer2Game4Score(rs.getByte("player2Game4Score"));
-
-            squashMatch.setPlayer1Game5Score(rs.getByte("player1Game5Score"));
-            squashMatch.setPlayer2Game5Score(rs.getByte("player2Game5Score"));
-
-            squashMatch.setWinnerName(rs.getString("winnerName"));
-            squashMatches.add(squashMatch);
+            fortniteMatches.add(matchEntry);
         }
-        return squashMatches;
+        return fortniteMatches;
     }
 
 
