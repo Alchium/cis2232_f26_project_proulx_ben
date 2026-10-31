@@ -76,7 +76,7 @@ public class ReportController {
         //Get all the applicable squash matches from the database
         MatchEntryBO matchEntryBO = new MatchEntryBO();
         ArrayList<MatchEntry> theList = matchEntryBO.processSelectAllByPlayerName(reportInput.getName());
-        reportInput.setFortniteMatches(theList);
+        reportInput.setMatchEntries(theList);
 
         //Add a message in case the report does not contain any data
         if (theList != null && theList.isEmpty()) {
@@ -128,7 +128,7 @@ public class ReportController {
         ReportBO.processPlayerScoreReport(reportInput);
 
         //Add a message in case the report does not contain any data
-        if (reportInput.getFortniteMatches() != null && reportInput.getFortniteMatches().isEmpty()) {
+        if (reportInput.getMatchEntries() != null && reportInput.getMatchEntries().isEmpty()) {
             model.addAttribute("message", "No matches found for that name");
             System.out.println("BJM - no data found");
         }

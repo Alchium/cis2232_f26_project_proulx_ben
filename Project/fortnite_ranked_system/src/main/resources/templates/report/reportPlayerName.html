@@ -37,34 +37,26 @@ label {
     <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.matchEntries)}">
         <thead>
         <tr>
-            <th>ID</th>
-            <th>Assessment Date</th>
-            <th>Created DateTime</th>
-            <th>Athlete Name</th>
-            <th>Assessor Name</th>
-            <th>Forehand Drives</th>
-            <th>Backhand Drives</th>
-            <th>Forehand Volley Max</th>
-            <th>Forehand Volley Sum</th>
-            <th>Backhand Volley Max</th>
-            <th>Backhand Volley Sum</th>
-            <th>Technical Score</th>
+            <th> ID |</th>
+            <th> Player Name |</th>
+            <th> Current Rank |</th>
+            <th> Rank Progress |</th>
+            <th> Eliminations |</th>
+            <th> Win |</th>
+            <th> Match Date |</th>
+            <th> Match Time </th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="item,iterStat : ${reportInput.matchEntries}">
-            <td th:text="${item.id}"></td>
-            <td th:text="${item.assessmentDate}"></td>
-            <td th:text="${item.createdDateTime}"></td>
-            <td th:text="${item.athleteName}"></td>
-            <td th:text="${item.assessorName}"></td>
-            <td th:text="${item.forehandDrives}"></td>
-            <td th:text="${item.backhandDrives}"></td>
-            <td th:text="${item.forehandVolleyMax}"></td>
-            <td th:text="${item.forehandVolleySum}"></td>
-            <td th:text="${item.backhandVolleyMax}"></td>
-            <td th:text="${item.backhandVolleySum}"></td>
-            <td th:text="${item.technicalScore}"></td>
+            <td th:text="${item.matchId}"></td>
+            <td th:text="${item.playerName}"></td>
+            <td th:text="${item.currentRank}"></td>
+            <td th:text="${item.rankProgress}"></td>
+            <td th:text="${item.eliminations}"></td>
+            <td th:text="${item.win}"></td>
+            <td th:text="${item.matchDate}"></td>
+            <td th:text="${item.matchTime}"></td>
         </tr>
         </tbody>
     </table>
