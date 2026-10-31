@@ -4,9 +4,12 @@
 <body>
 <nav th:fragment="navbar" class="navbar nav" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a th:href="@{/}" class="vert-align">
-<!--            <img src="/images/ic_launcher.png" class="logo"></span>-->
-        </a>
+        <div class="vert-align logo_box">
+            <a th:href="@{/}">
+                <img src="/images/F_-_Emoticon_-_Fortnite.webp" class="logo"></span>
+            </a>
+            <p>Fortnite Ranked System</p>
+        </div>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" id="burg"
            onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
