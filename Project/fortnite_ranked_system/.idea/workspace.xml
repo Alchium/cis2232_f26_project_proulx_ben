@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2c41b9d4-d0e9-4507-b5de-498276dad93a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2c41b9d4-d0e9-4507-b5de-498276dad93a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b60683e5-721a-4744-8191-aafa53944307.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/db-forest-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/db-forest-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalGraphQLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalGraphQLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/graphql/SkillsAssessmentSquashTechnicalInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/report/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/report/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/squash_skills.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fortnite_matches.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +176,7 @@
       <method v="2" />
     </configuration>
     <configuration name="MatchEntryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="squash_skills" />
+      <module name="fortnite_matches" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ca.hccis.fortnite.rest.*" />
@@ -200,7 +192,7 @@
     </configuration>
     <configuration name="TheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="squash_skills" />
+      <module name="fortnite_matches" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.fortnite.TheApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
