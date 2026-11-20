@@ -84,26 +84,25 @@ label {
     </div>
 
     <script th:inline="javascript">
-        const matchData = [[${theList}]];
-        console.log('Match Data:', matchData);
+        const matchDates = [[${chartLabels}]];
+        const rankValues = [[${chartScores}]];
 
-        const player = matchData.map(item => item.playerName);
-        const points = matchData.map(item => item.playerPoints);
-
-        const matchDate = [[${chartLabels}]];
-        const rankValue = [[${chartScores}]];
+        console.log('Match Dates:', matchDates);
+        console.log('Rank Values:', rankValues);
 
         const ctx = document.getElementById('reportChart');
 
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: matchDate,
+                labels: matchDates,
                 datasets: [
                     {
                         label: 'Rank Value',
-                        data: rankValue,
-                        borderColor: 'black'
+                        data: rankValues,
+                        fill: false,
+                        borderColor: 'black',
+                        tension: 0.1
                     }
                 ]
             },
