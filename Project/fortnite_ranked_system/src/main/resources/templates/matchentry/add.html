@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{fragments/head :: head}">
+        <title id="pageTitle"  th:text="#{label.add.edit}">Label Add/Edit</title>
+    </head>
+    <body>
+        <nav th:replace="~{fragments/navHeader :: navbar"}></nav>
+        <div class="container has-text-centered">
+
+            <h2 class="title is-2"
+                th:if= "${matchEntry.matchId != null}"
+                th:text="#{label.edit.order}">
+                Edit Match
+            </h2>
+            <h2 class="title is-2"
+                th:if= "${matchEntry.matchId == null}"
+                th:text="#{label.add.order}">
+                Add Match
+            </h2>
+
+
+            <form th:action="@{/matchentry/submit}" method="post" class="wbb" style="display:inline-block;text-align:left!important">
+
+                <!-- Hidden ID field -->
+                <input type="hidden" th:field="${matchEntry.matchId}" />
+
+
+                <p>
+                    <label>Player Name:</label>
+                    <input type="text" th:field="${matchEntry.playerName}" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.playerName}')}" th:errors="${matchEntry.playerName}"></p>
+
+                <p>
+                    <label>Current Rank:</label>
+                    <input type="text" th:field="${matchEntry.currentRank}" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.currentRank}')}" th:errors="${matchEntry.currentRank}"></p>
+
+                <p>
+                    <label>Rank Progress:</label>
+                    <input type="text" th:field="${matchEntry.rankProgress}" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.rankProgress}')}" th:errors="${matchEntry.rankProgress}"></p>
+
+                <p>
+                    <label>Eliminations:</label>
+                    <input type="text" th:field="${matchEntry.eliminations}" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.eliminations}')}" th:errors="${matchEntry.eliminations}"></p>
+
+                <p>
+                    <label>Placement:</label>
+                    <input type="text" th:field="${matchEntry.placement}" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.placement}')}" th:errors="${matchEntry.placement}"></p>
+
+                <p>
+                    <label>Win:</label>
+                    <input type="text" th:field="${matchEntry.win}" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.win}')}" th:errors="${matchEntry.win}"></p>
+
+                <p>
+                    <label>Assessment Date:</label>
+                    <input type="date" th:field="${matchEntry.matchDate}" placeholder="YYYY-MM-DD" />
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.matchDate}')}" th:errors="${matchEntry.matchDate}"></p>
+
+                <p>
+                    <label>Match Time:</label>
+                    <input type="text" th:field="${matchEntry.matchTime}" placeholder="HH:MM:SS"/>
+                </p>
+                <p class="cd" th:if="${#fields.hasErrors('${matchEntry.matchTime}')}" th:errors="${matchEntry.matchTime}"></p>
+
+                
+                <!-- Submit button -->
+                <button style="display:block;margin-top:24px!important" class="centered" th:text="#{label.submit}">Submit</button>
+            </form>
+
+        </div>
+        <footer th:replace="~{fragments/footer :: footer}"></footer>
+    </body>
+</html>

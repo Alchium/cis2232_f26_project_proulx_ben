@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head">
+<head th:replace="~{fragments/head :: head}">
     <title id="pageTitle">Report</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 label {
     margin-right: 8px
 }</style>
-<nav th:replace="fragments/navHeader :: navbar"></nav>
+<nav th:replace="~{fragments/navHeader :: navbar}"></nav>
 
 
 <div class="container has-text-centered">
@@ -67,6 +67,6 @@ label {
 
 <br></br>
 
-<footer th:replace="fragments/footer :: footer"></footer>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <!--Thanks to Ferhad, Francisco, and Carter from grad 2022 for the styling on this page.-->
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head">
+<head th:replace="~{fragments/head :: head}">
     <title id="pageTitle" th:text="${session.title}">Topic List</title>
 </head>
 <body>
-<nav th:replace="fragments/navHeader :: navbar"></nav>
+<nav th:replace="~{fragments/navHeader :: navbar}"></nav>
 <div class="container my-4">
     <h2 class="mb-3 text-center title">Skills Assessment List for Edit</h2>
     <h2 class="mb-3 text-center error" th:if="${not #strings.isEmpty(messageError)}" th:text="${messageError}">Message
@@ -16,7 +16,7 @@
         Message success from controller</h2>
 
     <div class="table-responsive">
-        <form action="#" th:action="@{/skillsassessmentsquashtechnical/list/edit/submit}" th:object="${form}"
+        <form action="#" th:action="@{/matchentry/list/edit/submit}" th:object="${form}"
               method="post">
             <fieldset>
                 <input type="submit" id="submitButton" th:value="Save">
@@ -74,6 +74,6 @@
 
 
 </div>
-<footer th:replace="fragments/footer :: footer"></footer>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>

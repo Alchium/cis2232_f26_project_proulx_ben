@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "matchentry")
+@Table(name = "MatchEntry")
 public class MatchEntry {
 
     //This is added to this jpa entity class as an example of @Transient.  If you add attributes to this
