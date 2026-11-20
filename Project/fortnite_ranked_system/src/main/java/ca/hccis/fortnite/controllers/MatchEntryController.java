@@ -189,6 +189,6 @@ public class MatchEntryController {
         model.addAttribute("matchEntry", new MatchEntry());
         return "matchentry/list";
     }
-    
+
 
 }

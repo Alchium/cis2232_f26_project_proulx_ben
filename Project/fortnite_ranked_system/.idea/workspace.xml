@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/MatchEntryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/MatchEntryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/repositories/MatchEntryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/dao/MatchEntryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/dao/MatchEntryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/MatchEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/MatchEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/SkillsAssessmentSquashTechnical.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/report/reportPlayerMatches.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/report/reportPlayerMatches.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/skillsassessmentsquashtechnical/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/matchentry/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/skillsassessmentsquashtechnical/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/matchentry/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/skillsassessmentsquashtechnical/listedit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/matchentry/listedit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/navHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/skillsassessmentsquashtechnical/add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/skillsassessmentsquashtechnical/list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/skillsassessmentsquashtechnical/listedit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/MatchEntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/MatchEntryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/matchentry/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/matchentry/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
