@@ -26,7 +26,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="cis2232_fortnite_ranked_system@localhost" uuid="2c41b9d4-d0e9-4507-b5de-498276dad93a">
+    <data-source source="LOCAL" name="cis2232_fortnite_ranked_system@localhost" uuid="f91dc5e6-ca56-42bd-bb56-3d8919720f5e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

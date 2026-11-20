@@ -46,7 +46,7 @@
 <!--                        <td><input th:field="*{books[__${itemStat.index}__].author}" /></td>-->
 
                     <tr th:each="current,itemStat : ${form.assessments}">
-                        <td><input th:field="*{assessments[__${itemStat.index}__].id}"/></td>
+                        <td><input th:field="*{assessments[__${itemStat.index}__].matchId}"/></td>
                         <td><input th:field="*{assessments[__${itemStat.index}__].assessmentDate}"></td>
                         <td><input th:field="*{assessments[__${itemStat.index}__].createdDateTime}"></td>
                         <td><input th:field="*{assessments[__${itemStat.index}__].athleteName}"></td>

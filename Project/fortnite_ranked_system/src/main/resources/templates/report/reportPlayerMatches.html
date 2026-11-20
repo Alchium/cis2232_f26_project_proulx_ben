@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+    <title id="pageTitle">Report</title>
+</head>
+<body>
+<style scoped="scoped">input:not(.hidden) {
+    display: inline-block;
+    float: right
+}
+
+.cd {
+    color: #F00 !important;
+    font-weight: bold;
+    margin-bottom: -48px
+}
+
+label {
+    margin-right: 8px
+}</style>
+<nav th:replace="fragments/navHeader :: navbar"></nav>
+
+
+<div class="container has-text-centered">
+    <h2 class="title is-2" th:text="#{label.report.player.report}">_</h2>
+
+    <form th:action="@{/report/player/matches/submit}" method="post" class="wbb"
+          style="display:inline-block;text-align:left!important">
+        <label>Player Name: </label>
+        <input type="text" th:field="${reportInput.name}"></input>
+        <br></br>
+        <button style="display:block;margin-top:24px!important" class="centered">Submit</button>
+    </form>
+
+    <p th:if="${not #strings.isEmpty(message)}" th:text="#{error.message.no.data.found.player}">not found</p>
+    <!--https://stackoverflow.com/a/33106495-->
+    <table class="wbb centered" th:if="${not #lists.isEmpty(reportInput.matchEntries)}">
+        <thead>
+        <tr>
+            <th> ID |</th>
+            <th> Player Name |</th>
+            <th> Current Rank |</th>
+            <th> Rank Progress |</th>
+            <th> Eliminations |</th>
+            <th> Placement |</th>
+            <th> Win |</th>
+            <th> Match Date |</th>
+            <th> Match Time </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item,iterStat : ${reportInput.matchEntries}">
+            <td th:text="${item.matchId}"></td>
+            <td th:text="${item.playerName}"></td>
+            <td th:text="${item.currentRank}"></td>
+            <td th:text="${item.rankProgress}"></td>
+            <td th:text="${item.eliminations}"></td>
+            <td th:text="${item.placement}"></td>
+            <td th:text="${item.win}"></td>
+            <td th:text="${item.matchDate}"></td>
+            <td th:text="${item.matchTime}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<br></br>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

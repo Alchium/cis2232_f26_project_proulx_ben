@@ -4,9 +4,12 @@
 <body>
 <nav th:fragment="navbar" class="navbar nav" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a th:href="@{/}" class="vert-align">
-            <img src="/images/ic_launcher.png" class="logo"></span>
-        </a>
+        <div class="vert-align logo_box">
+            <a th:href="@{/}">
+                <img src="/images/F_-_Emoticon_-_Fortnite.webp" class="logo"></span>
+            </a>
+            <p>Fortnite Ranked System</p>
+        </div>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" id="burg"
            onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');"
@@ -27,12 +30,12 @@
             </div>
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a th:href="@{/report}" href="/about" class="accent navbar-link">Reports</a>
+                    <a th:href="@{/report}" href="/about" class="accent navbar-link" th:text="#{label.reports}">Reports</a>
                     <div class="accent-background navbar-dropdown">
-                        <a th:href="@{/report/squash/name}" class="accent navbar-item"
-                           th:text="#{label.report.athlete.assessor.report}">Name report-placeholder</a>
-                        <a th:href="@{/report/squash/score}" class="accent navbar-item"
-                           th:text="#{label.report.score.range}">Score range report-placeholder</a>
+                        <a th:href="@{/report/player/matches}" class="accent navbar-item"
+                           th:text="#{label.report.player.report}">Name report-placeholder</a>
+                        <a th:href="@{/report/player/overall}" class="accent navbar-item"
+                           th:text="#{label.report.overall}">Score range report-placeholder</a>
                     </div>
                 </div>
                 <div class="navbar-end">

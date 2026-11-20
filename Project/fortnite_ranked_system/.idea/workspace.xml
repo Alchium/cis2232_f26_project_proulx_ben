@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="" />
+    <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/ReportBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/bo/ReportBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/ReportInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/entity/ReportInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/report/reportPlayerOverall.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/report/reportPlayerOverall.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,9 +57,9 @@
   </component>
   <component name="DatabaseLocalColorSettings">
     <colors>
-      <entry key="2c41b9d4-d0e9-4507-b5de-498276dad93a" value="" />
       <entry key="9963e351-9170-481d-b1dc-8815ba433aea" value="" />
       <entry key="b60683e5-721a-4744-8191-aafa53944307" value="" />
+      <entry key="f91dc5e6-ca56-42bd-bb56-3d8919720f5e" value="" />
     </colors>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -103,15 +109,18 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.TheApplication.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;S2---Report&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/College Work/Fall 2026/cis2232/Ben Project/cis2232_f26_project_proulx_ben/Project/fortnite_ranked_system&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Drago/Documents/GitHub/cis2232_f26_project_proulx_ben/Project/fortnite_ranked_system/src/main/resources/static/images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
@@ -125,6 +134,7 @@
       &quot;mysql&quot;
     ],
     &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;2c41b9d4-d0e9-4507-b5de-498276dad93a&quot;,
       &quot;9963e351-9170-481d-b1dc-8815ba433aea&quot;,
       &quot;b60683e5-721a-4744-8191-aafa53944307&quot;,
       &quot;3434da5e-405c-4baa-9c88-b6f214a4d11d&quot;,
@@ -138,11 +148,19 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Drago\Documents\GitHub\cis2232_f26_project_proulx_ben\Project\fortnite_ranked_system\src\main\resources\static\images" />
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\resources\templates\report" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca\hccis\squash\bo" />
       <recent name="C:\Bitbucket\cis2232_20252026_project_maclean_bj_squash\Project\squash_skills_tracker\src\main\java\ca" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ca.hccis.fortnite.jpa.entity" />
+      <recent name="ca.hccis.fortnite.bo" />
+      <recent name="ca.hccis.fortnite.dao" />
+      <recent name="ca.hccis.squash.entity" />
+      <recent name="ca.hccis.squash.bo" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TheApplication">
@@ -155,19 +173,19 @@
     <configuration name="createDatabase.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/db/mysql/createDatabase.sql" />
       <script-mode>FILE</script-mode>
-      <data-source id="b60683e5-721a-4744-8191-aafa53944307" />
+      <data-source id="f91dc5e6-ca56-42bd-bb56-3d8919720f5e" />
       <method v="2" />
     </configuration>
-    <configuration name="SkillsAssessmentSquashTechnicalServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="squash_skills" />
+    <configuration name="MatchEntryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fortnite_matches" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ca.hccis.squash.rest.*" />
+          <option name="PATTERN" value="ca.hccis.fortnite.rest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ca.hccis.squash.rest" />
-      <option name="MAIN_CLASS_NAME" value="ca.hccis.squash.rest.SkillsAssessmentSquashTechnicalServiceTest" />
+      <option name="PACKAGE_NAME" value="ca.hccis.fortnite.rest" />
+      <option name="MAIN_CLASS_NAME" value="ca.hccis.fortnite.rest.MatchEntryServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,8 +193,8 @@
     </configuration>
     <configuration name="TheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="squash_skills" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.squash.TheApplication" />
+      <module name="fortnite_matches" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ca.hccis.fortnite.TheApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,20 +202,20 @@
     <list>
       <item itemvalue="Database Script.createDatabase.sql" />
       <item itemvalue="Database Script.createDatabase1.sql" />
-      <item itemvalue="JUnit.SkillsAssessmentSquashTechnicalServiceTest" />
+      <item itemvalue="JUnit.MatchEntryServiceTest" />
       <item itemvalue="Spring Boot.TheApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SkillsAssessmentSquashTechnicalServiceTest" />
+        <item itemvalue="JUnit.MatchEntryServiceTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.24374.151" />
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.24374.151" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
       </set>
     </attachedChunks>
   </component>
@@ -282,6 +300,16 @@
     <option featureType="dependencySupport" implementationName="java:jakarta.ws.rs:jakarta.ws.rs-api" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
     <option featureType="dependencySupport" implementationName="java:jakarta.xml.ws:jakarta.xml.ws-api" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
