@@ -22,6 +22,9 @@ public class ReportBO {
         MatchEntryBO matchEntryBO = new MatchEntryBO();
         ArrayList<MatchEntry> theList = matchEntryBO.processSelectAllByPlayerName(reportInput.getName());
 
+        ArrayList<String> chartLabels = new ArrayList<>();
+        ArrayList<Double> chartScores = new ArrayList<>();
+
         // Chronological order so "first" and "last" in the range are correct
         theList.sort(Comparator.comparing(MatchEntry::getMatchDate));
 
@@ -67,6 +70,10 @@ public class ReportBO {
                 }
                 lastInRange = match;
             }
+            
+            // inside the valid-match block:
+            chartLabels.add(match.getMatchDate().toString());
+            chartScores.add(getAbsoluteRankScore(match.getCurrentRank(), match.getRankProgress()));
         }
 
         if (lastInRange != null) {
@@ -103,6 +110,8 @@ public class ReportBO {
         playerStatsList.add(playerStats);
 
         reportInput.setPlayerStatsList(playerStatsList);
+
+
     }
 
     // Ranks ordered lowest to highest. Position in this list = rank index.
