@@ -7,7 +7,7 @@
     <list default="true" id="b89a2cd4-5fc3-4077-b552-d4f5b15babc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/MatchEntryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/controllers/MatchEntryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/matchentry/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/matchentry/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/MatchEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/hccis/fortnite/jpa/entity/MatchEntry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

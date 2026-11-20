@@ -48,7 +48,7 @@ public class MatchEntryController {
     @RequestMapping("")
     public String home(Model model) {
         Iterable<MatchEntry> matchEntries = _smr.findAll();
-        model.addAttribute("matchEntry",matchEntries);
+        model.addAttribute("matchEntries",matchEntries);
         return "matchentry/list";
     }
 

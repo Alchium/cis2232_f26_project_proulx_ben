@@ -1,11 +1,13 @@
 package ca.hccis.fortnite.jpa.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "MatchEntry")
+@Table(name = "matchentry")
 public class MatchEntry {
 
     //This is added to this jpa entity class as an example of @Transient.  If you add attributes to this
@@ -28,9 +30,9 @@ public class MatchEntry {
     @Column(name = "currentRank", nullable = false, length = 20)
     private String currentRank;
 
-    @Size( max = 5)
-    @NotNull
-    @Column(name = "rankProgress", nullable = false, length = 5)
+    @DecimalMin(value = "0.0", message = "Rank progress must be at least 0")
+    @DecimalMax(value = "100.0", message = "Rank progress cannot exceed 100")
+    @Column(name = "rankProgress", nullable = false)
     private double rankProgress;
 
     @Column(name = "eliminations")
