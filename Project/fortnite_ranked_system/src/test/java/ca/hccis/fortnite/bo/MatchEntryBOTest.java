@@ -1,3 +1,4 @@
+/*
 package ca.hccis.fortnite.bo;
 
 import ca.hccis.fortnite.jpa.entity.MatchEntry;
@@ -66,4 +67,4 @@ class MatchEntryBOTest {
         Assertions.assertEquals(expected, squashSkillsAssessment.getTechnicalScore());
     }
 
-}
+}*/

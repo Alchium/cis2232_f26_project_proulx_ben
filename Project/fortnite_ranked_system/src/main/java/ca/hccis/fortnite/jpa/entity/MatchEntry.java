@@ -124,4 +124,16 @@ public class MatchEntry {
         this.matchTime = matchTime;
     }
 
+    @Override
+    public String toString() {
+        return  "matchId = " + matchId +
+                " | playerName = '" + playerName + '\'' +
+                " | currentRank = '" + currentRank + '\'' +
+                " | rankProgress = " + rankProgress +
+                " | eliminations = " + eliminations +
+                " | placement = " + placement +
+                " | win = " + win +
+                " | matchDate = '" + matchDate + '\'' +
+                " | matchTime = '" + matchTime + '\'';
+    }
 }
