@@ -64,12 +64,11 @@ label {
             <td th:text="${item.playerName}"></td>
             <td th:text="${item.currentRank}"></td>
             <td th:text="${item.rankProgress}"></td>
-            <td th:text="${item.rankDifference}"></td>
-            <td th:text="${item.eliminations}"></td>
-            <td th:text="${item.eliminationAverage}"></td>
-            <td th:text="${item.placementAverage}"></td>
+            <td th:text="${(item.rankDifference > 0 ? '+' : '') + #numbers.formatDecimal(item.rankDifference, 1, 1) + '%'}"></td>            <td th:text="${item.eliminations}"></td>
+            <td th:text="${#numbers.formatDecimal(item.eliminationAverage, 1, 2)}"></td>
+            <td th:text="${#numbers.formatDecimal(item.placementAverage, 1, 2)}"></td>
             <td th:text="${item.wins}"></td>
-            <td th:text="${item.winAverage}"></td>
+            <td th:text="${#numbers.formatDecimal(item.winAverage, 1, 1) + '%'}"></td>
         </tr>
         </tbody>
     </table>

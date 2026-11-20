@@ -5,6 +5,9 @@ import ca.hccis.fortnite.entity.ReportInput;
 import ca.hccis.fortnite.jpa.entity.MatchEntry;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Class to hold business logic needed for the report.
@@ -16,11 +19,12 @@ public class ReportBO {
 
     public static void processPlayerScoreReport(ReportInput reportInput) {
 
-        //Get all of the matches
         MatchEntryBO matchEntryBO = new MatchEntryBO();
         ArrayList<MatchEntry> theList = matchEntryBO.processSelectAllByPlayerName(reportInput.getName());
 
-        //Process through the matches and get score summaries.
+        // Chronological order so "first" and "last" in the range are correct
+        theList.sort(Comparator.comparing(MatchEntry::getMatchDate));
+
         ArrayList<PlayerStats> playerStatsList = new ArrayList<>();
         PlayerStats playerStats = new PlayerStats();
 
@@ -35,41 +39,56 @@ public class ReportBO {
         double placementAverage = 0.0;
         double winAverage = 0.0;
 
-        for (int current = 0; current < theList.size(); current++ ) {
+        // First and last matches inside the selected range
+        MatchEntry firstInRange = null;
+        MatchEntry lastInRange = null;
 
-            //filter out if match is before the start date
-            if (reportInput.getStartDate() != null && !reportInput.getStartDate().isEmpty()) {
-                if (theList.get(current).getMatchDate().compareTo(reportInput.getStartDate()) < 0) {
-                    System.out.println("Skipping match " + theList.get(current).getMatchDate() + " because it is before the start date");
-                    continue;
-                }
+        for (MatchEntry match : theList) {
+
+            if (reportInput.getStartDate() != null && !reportInput.getStartDate().isEmpty()
+                    && match.getMatchDate().compareTo(reportInput.getStartDate()) < 0) {
+                continue;
             }
-            //filter out if match is after the date
-            if (reportInput.getEndDate() != null && !reportInput.getEndDate().isEmpty()) {
-                if (theList.get(current).getMatchDate().compareTo(reportInput.getEndDate()) > 0) {
-                    System.out.println("Skipping match " + theList.get(current).getMatchDate() + " because it is after the end date");
-                    continue;
-                }
+            if (reportInput.getEndDate() != null && !reportInput.getEndDate().isEmpty()
+                    && match.getMatchDate().compareTo(reportInput.getEndDate()) > 0) {
+                continue;
             }
 
-            if (theList.get(current).getPlayerName().equalsIgnoreCase(reportInput.getName())) {
-                totalEliminations += theList.get(current).getEliminations();
-                totalPlacement += theList.get(current).getPlacement();
+            if (match.getPlayerName().equalsIgnoreCase(reportInput.getName())) {
+                totalEliminations += match.getEliminations();
+                totalPlacement += match.getPlacement();
                 matchesPlayed += 1;
-
-                if (theList.get(current).getWin()) {
+                if (match.getWin()) {
                     totalWins += 1;
                 }
-            }
 
-            rankDifference = theList.get(current).getRankProgress()/*-theList.get(i-1).getRankProgress()*/;
-            currentRank = theList.get(current).getCurrentRank();
-            rankProgress = theList.get(current).getRankProgress();
+                if (firstInRange == null) {
+                    firstInRange = match;
+                }
+                lastInRange = match;
+            }
         }
 
-        placementAverage = (double) totalPlacement / matchesPlayed;
-        winAverage = (double) totalWins / matchesPlayed * 100.00;
-        eliminationAverage = (double) totalEliminations / matchesPlayed;
+        if (lastInRange != null) {
+            currentRank = lastInRange.getCurrentRank();
+            rankProgress = lastInRange.getRankProgress();
+
+            // Rank difference = last match in range - first match in range
+            if (firstInRange != lastInRange) {
+                double startScore = getAbsoluteRankScore(firstInRange.getCurrentRank(), firstInRange.getRankProgress());
+                double endScore = getAbsoluteRankScore(lastInRange.getCurrentRank(), lastInRange.getRankProgress());
+
+                if (startScore >= 0 && endScore >= 0) {
+                    rankDifference = endScore - startScore;
+                }
+            }
+        }
+
+        if (matchesPlayed > 0) {
+            placementAverage = (double) totalPlacement / matchesPlayed;
+            winAverage = (double) totalWins / matchesPlayed * 100.00;
+            eliminationAverage = (double) totalEliminations / matchesPlayed;
+        }
 
         playerStats.setCurrentRank(currentRank);
         playerStats.setRankProgress(rankProgress);
@@ -85,4 +104,37 @@ public class ReportBO {
 
         reportInput.setPlayerStatsList(playerStatsList);
     }
+
+    // Ranks ordered lowest to highest. Position in this list = rank index.
+    private static final List<String> RANK_ORDER = Arrays.asList(
+            "bronze i", "bronze ii", "bronze iii",
+            "silver i", "silver ii", "silver iii",
+            "gold i", "gold ii", "gold iii",
+            "platinum i", "platinum ii", "platinum iii",
+            "diamond i", "diamond ii", "diamond iii",
+            "elite", "champion", "unreal"
+    );
+
+    /**
+     * Converts a rank name and progress % into a single comparable score.
+     * Returns -1 if the rank name isn't recognized.
+     */
+    private static double getAbsoluteRankScore(String rankName, double rankProgress) {
+        if (rankName == null) {
+            return -1;
+        }
+        // Normalize "Gold 2" / "gold  II" style input to "gold ii"
+        String normalized = rankName.trim().toLowerCase()
+                .replaceAll("\\s+", " ")
+                .replaceAll(" 1$", " i")
+                .replaceAll(" 2$", " ii")
+                .replaceAll(" 3$", " iii");
+
+        int index = RANK_ORDER.indexOf(normalized);
+        if (index < 0) {
+            return -1;
+        }
+        return (index * 100.0) + rankProgress;
+    }
+
 }
