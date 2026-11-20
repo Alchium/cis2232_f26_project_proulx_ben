@@ -17,6 +17,10 @@ public class ReportInput {
     private ArrayList<MatchEntry> matchEntries;
     private ArrayList<PlayerStats> playerStatsList;
 
+    // Chart data (one entry per match in the selected range, in date order)
+    private ArrayList<String> chartLabels = new ArrayList<>();
+    private ArrayList<Double> chartScores = new ArrayList<>();
+
     public String getName() {
         return name;
     }
@@ -55,5 +59,21 @@ public class ReportInput {
 
     public void setMatchEntries(ArrayList<MatchEntry> matchEntries) {
         this.matchEntries = matchEntries;
+    }
+
+    public ArrayList<String> getChartLabels() {
+        return chartLabels;
+    }
+
+    public void setChartLabels(ArrayList<String> chartLabels) {
+        this.chartLabels = chartLabels;
+    }
+
+    public ArrayList<Double> getChartScores() {
+        return chartScores;
+    }
+
+    public void setChartScores(ArrayList<Double> chartScores) {
+        this.chartScores = chartScores;
     }
 }

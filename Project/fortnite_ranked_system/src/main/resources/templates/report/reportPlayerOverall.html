@@ -73,58 +73,33 @@ label {
         </tbody>
     </table>
 
-    <!-- 1. The Parent Container with Flexbox centering -->
-    <div style="width: 600px; height: 350px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
-
-        <!-- 2. An Inner Wrapper that sets the actual size of the chart -->
-        <div style="width: 400px; height: 250px; position: relative;">
-            <canvas id="reportChart"></canvas>
+    <div th:if="${not #lists.isEmpty(reportInput.playerStatsList)}">
+        <div style="width: 600px; height: 350px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+            <div style="width: 400px; height: 250px; position: relative;">
+                <canvas id="reportChart"></canvas>
+            </div>
         </div>
 
-    </div>
+        <script th:inline="javascript">
+            const matchDates = [[${reportInput.chartLabels}]];
+            const rankValues = [[${reportInput.chartScores}]];
 
-    <script th:inline="javascript">
-        const matchDates = [[${chartLabels}]];
-        const rankValues = [[${chartScores}]];
-
-        console.log('Match Dates:', matchDates);
-        console.log('Rank Values:', rankValues);
-
-        const ctx = document.getElementById('reportChart');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: matchDates,
-                datasets: [
-                    {
-                        label: 'Rank Value',
+            new Chart(document.getElementById('reportChart'), {
+                type: 'line',
+                data: {
+                    labels: matchDates,
+                    datasets: [{
+                        label: 'Rank Score',
                         data: rankValues,
                         fill: false,
                         borderColor: 'black',
                         tension: 0.1
-                    }
-                ]
-            },
-            /*options: {
-                responsive: true,            // Crucial: Forces chart to calculate bounds based on its parent container
-                maintainAspectRatio: false,  // Crucial: Overrides Chart.js default aspect ratios
-                scales: {
-                    y: {
-                        beginAtZero: false
-                    }
+                    }]
                 }
-            }*/
-        });
-    </script>
-
-
-
-
-
-
+            });
+        </script>
+    </div>
 </div>
-
 <br></br>
 
 <footer th:replace="~{fragments/footer :: footer}"></footer>

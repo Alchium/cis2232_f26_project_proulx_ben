@@ -61,6 +61,8 @@ public class ReportBO {
                 totalEliminations += match.getEliminations();
                 totalPlacement += match.getPlacement();
                 matchesPlayed += 1;
+                chartLabels.add(match.getMatchDate().toString());
+                chartScores.add(getAbsoluteRankScore(match.getCurrentRank(), match.getRankProgress()));
                 if (match.getWin()) {
                     totalWins += 1;
                 }
@@ -71,9 +73,7 @@ public class ReportBO {
                 lastInRange = match;
             }
             
-            // inside the valid-match block:
-            chartLabels.add(match.getMatchDate().toString());
-            chartScores.add(getAbsoluteRankScore(match.getCurrentRank(), match.getRankProgress()));
+
         }
 
         if (lastInRange != null) {
@@ -107,11 +107,12 @@ public class ReportBO {
         playerStats.setPlacementAverage(placementAverage);
         playerStats.setWinAverage(winAverage);
         playerStats.setPlayerName(reportInput.getName());
-        playerStatsList.add(playerStats);
 
+        playerStatsList.add(playerStats);
         reportInput.setPlayerStatsList(playerStatsList);
 
-
+        reportInput.setChartLabels(chartLabels);
+        reportInput.setChartScores(chartScores);
     }
 
     // Ranks ordered lowest to highest. Position in this list = rank index.
