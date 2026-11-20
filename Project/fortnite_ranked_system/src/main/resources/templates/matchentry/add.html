@@ -4,7 +4,7 @@
         <title id="pageTitle"  th:text="#{label.add.edit}">Label Add/Edit</title>
     </head>
     <body>
-        <nav th:replace="~{fragments/navHeader :: navbar"}></nav>
+        <nav th:replace="~{fragments/navHeader :: navbar}"></nav>
         <div class="container has-text-centered">
 
             <h2 class="title is-2"
@@ -73,7 +73,7 @@
                 </p>
                 <p class="cd" th:if="${#fields.hasErrors('${matchEntry.matchTime}')}" th:errors="${matchEntry.matchTime}"></p>
 
-                
+
                 <!-- Submit button -->
                 <button style="display:block;margin-top:24px!important" class="centered" th:text="#{label.submit}">Submit</button>
             </form>
