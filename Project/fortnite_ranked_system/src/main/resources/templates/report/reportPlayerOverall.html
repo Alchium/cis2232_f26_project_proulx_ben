@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head">
+<head th:replace="~{fragments/head :: head}">
     <title id="pageTitle">Report</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 label {
     margin-right: 8px
 }</style>
-<nav th:replace="fragments/navHeader :: navbar"></nav>
+<nav th:replace="~{fragments/navHeader :: navbar}"></nav>
 
 
 <div class="container has-text-centered">
@@ -73,10 +73,61 @@ label {
         </tbody>
     </table>
 
+    <!-- 1. The Parent Container with Flexbox centering -->
+    <div style="width: 600px; height: 350px; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+
+        <!-- 2. An Inner Wrapper that sets the actual size of the chart -->
+        <div style="width: 400px; height: 250px; position: relative;">
+            <canvas id="reportChart"></canvas>
+        </div>
+
+    </div>
+
+    <script th:inline="javascript">
+        const matchData = [[${theList}]];
+        console.log('Match Data:', matchData);
+
+        const player = matchData.map(item => item.playerName);
+        const points = matchData.map(item => item.playerPoints);
+
+        const matchDate = [[${chartLabels}]];
+        const rankValue = [[${chartScores}]];
+
+        const ctx = document.getElementById('reportChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: matchDate,
+                datasets: [
+                    {
+                        label: 'Rank Value',
+                        data: rankValue,
+                        borderColor: 'black'
+                    }
+                ]
+            },
+            /*options: {
+                responsive: true,            // Crucial: Forces chart to calculate bounds based on its parent container
+                maintainAspectRatio: false,  // Crucial: Overrides Chart.js default aspect ratios
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }*/
+        });
+    </script>
+
+
+
+
+
+
 </div>
 
 <br></br>
 
-<footer th:replace="fragments/footer :: footer"></footer>
+<footer th:replace="~{fragments/footer :: footer}"></footer>
 </body>
 </html>
