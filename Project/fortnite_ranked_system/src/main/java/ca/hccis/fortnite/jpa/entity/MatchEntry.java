@@ -1,10 +1,7 @@
 package ca.hccis.fortnite.jpa.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.DecimalMax;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 @Entity
 @Table(name = "matchentry")
@@ -19,39 +16,53 @@ public class MatchEntry {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "matchId", nullable = false)
     private Integer matchId;
-
-    @Size(min=1, max = 10)
-    @NotNull
+    
+    @NotNull(message = "Player Name is required")
+    @Size(min=1, max = 100)
     @Column(name = "playerName", nullable = false, length = 100)
     private String playerName;
 
+    @NotNull(message = "Current Rank is required")
+    @Pattern(
+            regexp = "^(Bronze|Silver|Gold|Platinum|Diamond) (I|II|III)$|^(Elite|Champion|Unreal)$",
+            message = "Rank must be Bronze, Silver, Gold, Platinum or Diamond (I, II or III), or Elite, Champion or Unreal"
+    )
     @Size(max = 20)
-    @NotNull
     @Column(name = "currentRank", nullable = false, length = 20)
     private String currentRank;
 
+    @NotNull(message = "Rank Progress is required")
     @DecimalMin(value = "0.0", message = "Rank progress must be at least 0")
     @DecimalMax(value = "100.0", message = "Rank progress cannot exceed 100")
     @Column(name = "rankProgress", nullable = false)
     private double rankProgress;
 
+    @NotNull(message = "Eliminations is required")
+    @Min(value = 0, message = "Eliminations must be at least 0")
+    @Max(value = 100, message = "Eliminations cannot exceed 100")
     @Column(name = "eliminations")
     private Integer eliminations;
 
+    @NotNull(message = "Placement is required")
+    @Min(value = 1, message = "Placement must be at least 1")
+    @Max(value = 100, message = "Placement cannot exceed 100")
     @Column(name = "placement")
     private Integer placement;
 
+    @NotNull(message = "Win is required")
     @Column(name = "win")
     private Boolean win;
 
     @Size(max = 20)
     @NotNull
     @Column(name = "matchDate", nullable = false, length = 20)
+    @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}", message = "Date must be yyyy-mm-dd")
     private String matchDate;
 
     @Size(max = 20)
     @NotNull
     @Column(name = "matchTime", nullable = false, length = 20)
+    @Pattern(regexp = "\\d{2}:\\d{2}:\\d{2}", message = "Time must be HH:MM:SS")
     private String matchTime;
 
     public Integer getMatchId() {

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Controller to administer reports of the project.
@@ -26,6 +27,17 @@ public class ReportController {
 
     private static final Logger logger = LoggerFactory.getLogger(ReportController.class);
 
+    @ModelAttribute("ranks")
+    public List<String> ranks() {
+        return List.of(
+                "Bronze I", "Bronze II", "Bronze III",
+                "Silver I", "Silver II", "Silver III",
+                "Gold I", "Gold II", "Gold III",
+                "Platinum I", "Platinum II", "Platinum III",
+                "Diamond I", "Diamond II", "Diamond III",
+                "Elite", "Champion", "Unreal");
+    }
+    
     /**
      * Send the user to list of reports view.
      *
