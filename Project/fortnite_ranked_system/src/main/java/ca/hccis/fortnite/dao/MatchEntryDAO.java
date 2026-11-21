@@ -89,42 +89,16 @@ public class MatchEntryDAO {
      * @author BJM
      */
     public ArrayList<MatchEntry> selectAllByPlayerName(String name) {
-        ArrayList<MatchEntry> fortniteMatches = null;
-        Statement stmt = null;
+        ArrayList<MatchEntry> fortniteMatches = new ArrayList<>();
+        String sql = "SELECT * FROM MatchEntry WHERE playerName LIKE ? ORDER BY matchDate, matchTime";
 
-        //******************************************************************
-        //Use the DriverManager to get a connection to our MySql database.  Note
-        //that in the dependencies, we added the Java connector to MySql which
-        //will allow us to connect to a MySql database.
-        //******************************************************************
-        //******************************************************************
-        //Create a statement object using our connection to the database.  This
-        //statement object will allow us to run sql commands against the database.
-        //******************************************************************
-        try {
-
-            stmt = conn.createStatement();
-            String sqlStatement = "select * from MatchEntry" +
-                    "where playerName like '%"+name+"%'" +
-                    " ORDER BY matchDate AND matchTime;";
-            rs = stmt.executeQuery(sqlStatement);
-
-            //******************************************************************
-            //Loop through the result set using the next method.
-            //******************************************************************
-            fortniteMatches = loadList(rs);
-
-        } catch (SQLException e) {
-
-            e.printStackTrace();
-
-        } finally {
-
-            try {
-                stmt.close();
-            } catch (SQLException ex) {
-                System.out.println("There was an error closing");
+        try (PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, "%" + name + "%");
+            try (ResultSet resultSet = ps.executeQuery()) {
+                fortniteMatches = loadList(resultSet);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return fortniteMatches;
     }
