@@ -16,9 +16,10 @@ public class MatchEntry {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "matchId", nullable = false)
     private Integer matchId;
-    
+
     @NotNull(message = "Player Name is required")
-    @Size(min=1, max = 100)
+    @Min(value = 1, message = "Player Name must be at least 1 character long")
+    @Max(value = 100, message = "Player Name cannot exceed 100 characters")
     @Column(name = "playerName", nullable = false, length = 100)
     private String playerName;
 
